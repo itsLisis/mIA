@@ -453,9 +453,9 @@ if __name__ == "__main__":
     grades_columns.insert(0, 'Nombre completo')
     df_notas = df_realistic[grades_columns].copy()
     
-    # Guardar en CSV separados
-    df_formulario.to_csv('respuestas_formulario.csv', index=False, encoding='utf-8')
-    df_notas.to_csv('notas_academicas.csv', index=False, encoding='utf-8')
+    # Guardar en CSV separados en el directorio data
+    df_formulario.to_csv('../data/respuestas_formulario.csv', index=False, encoding='utf-8')
+    df_notas.to_csv('../data/notas_academicas.csv', index=False, encoding='utf-8')
     
     print(f"Dataset generado con {len(df_realistic)} respuestas")
     print(f"Columnas del formulario: {len(df_formulario.columns)}")
