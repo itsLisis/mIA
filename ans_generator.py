@@ -94,6 +94,8 @@ def generate_realistic_responses(form_structure, num_responses=100):
         # Variables para mantener coherencia entre respuestas de materias
         materias_que_van_bien = []
         materias_que_van_mal = []
+        materias_que_gustan_mas = []
+        materias_que_gustan_menos = []
         
         for question in form_structure['questions']:
             answer = None
@@ -137,36 +139,76 @@ def generate_realistic_responses(form_structure, num_responses=100):
                     answer = generate_response(question)
             
             elif 'materias que te gustan MÁS' in question['question']:
-                # Usar materias favoritas del perfil
+                # Usar materias favoritas del perfil pero EXCLUYENDO las que ya dijo que le gustan menos
                 if random.random() < 0.8 and profile['materias_favoritas']:
-                    available = [opt for opt in profile['materias_favoritas'] if opt in question['options']]
+                    # Filtrar materias que NO están en las que gustan menos
+                    available = [opt for opt in profile['materias_favoritas'] 
+                               if opt in question['options'] and opt not in materias_que_gustan_menos]
                     if available:
                         selected = available[:]
-                        remaining = [opt for opt in question['options'] if opt not in selected]
+                        remaining = [opt for opt in question['options'] 
+                                   if opt not in selected and opt not in materias_que_gustan_menos]
                         while len(selected) < question.get('max_selections', 3) and remaining:
                             selected.append(random.choice(remaining))
                             remaining.remove(selected[-1])
                         answer = selected[:question.get('max_selections', 3)]
+                        materias_que_gustan_mas = answer[:]
                     else:
-                        answer = generate_response(question)
+                        # Si no hay materias del perfil disponibles, usar cualquier materia que no esté en las que gustan menos
+                        remaining = [opt for opt in question['options'] if opt not in materias_que_gustan_menos]
+                        if remaining:
+                            num_selections = min(question.get('max_selections', 3), len(remaining))
+                            answer = random.sample(remaining, num_selections)
+                            materias_que_gustan_mas = answer[:]
+                        else:
+                            answer = []
+                            materias_que_gustan_mas = []
                 else:
-                    answer = generate_response(question)
+                    # Generar respuesta aleatoria pero excluyendo las que gustan menos
+                    remaining = [opt for opt in question['options'] if opt not in materias_que_gustan_menos]
+                    if remaining:
+                        num_selections = min(question.get('max_selections', 3), len(remaining))
+                        answer = random.sample(remaining, num_selections)
+                        materias_que_gustan_mas = answer[:]
+                    else:
+                        answer = []
+                        materias_que_gustan_mas = []
             
             elif 'materias que te gustan MENOS' in question['question']:
-                # Usar materias menos favoritas del perfil
+                # Usar materias menos favoritas del perfil pero EXCLUYENDO las que ya dijo que le gustan más
                 if random.random() < 0.8 and profile['materias_menos_favoritas']:
-                    available = [opt for opt in profile['materias_menos_favoritas'] if opt in question['options']]
+                    # Filtrar materias que NO están en las que gustan más
+                    available = [opt for opt in profile['materias_menos_favoritas'] 
+                               if opt in question['options'] and opt not in materias_que_gustan_mas]
                     if available:
                         selected = available[:]
-                        remaining = [opt for opt in question['options'] if opt not in selected]
+                        remaining = [opt for opt in question['options'] 
+                                   if opt not in selected and opt not in materias_que_gustan_mas]
                         while len(selected) < question.get('max_selections', 3) and remaining:
                             selected.append(random.choice(remaining))
                             remaining.remove(selected[-1])
                         answer = selected[:question.get('max_selections', 3)]
+                        materias_que_gustan_menos = answer[:]
                     else:
-                        answer = generate_response(question)
+                        # Si no hay materias del perfil disponibles, usar cualquier materia que no esté en las que gustan más
+                        remaining = [opt for opt in question['options'] if opt not in materias_que_gustan_mas]
+                        if remaining:
+                            num_selections = min(question.get('max_selections', 3), len(remaining))
+                            answer = random.sample(remaining, num_selections)
+                            materias_que_gustan_menos = answer[:]
+                        else:
+                            answer = []
+                            materias_que_gustan_menos = []
                 else:
-                    answer = generate_response(question)
+                    # Generar respuesta aleatoria pero excluyendo las que gustan más
+                    remaining = [opt for opt in question['options'] if opt not in materias_que_gustan_mas]
+                    if remaining:
+                        num_selections = min(question.get('max_selections', 3), len(remaining))
+                        answer = random.sample(remaining, num_selections)
+                        materias_que_gustan_menos = answer[:]
+                    else:
+                        answer = []
+                        materias_que_gustan_menos = []
             
             elif 'materias te va MEJOR' in question['question']:
                 # Usar materias buenas del perfil y guardar para coherencia
@@ -179,7 +221,6 @@ def generate_realistic_responses(form_structure, num_responses=100):
                             selected.append(random.choice(remaining))
                             remaining.remove(selected[-1])
                         answer = selected[:question.get('max_selections', 3)]
-                        # Guardar las materias que van bien para evitar contradicciones
                         materias_que_van_bien = answer[:]
                     else:
                         answer = generate_response(question)
@@ -202,22 +243,27 @@ def generate_realistic_responses(form_structure, num_responses=100):
                             selected.append(random.choice(remaining))
                             remaining.remove(selected[-1])
                         answer = selected[:question.get('max_selections', 3)]
+                        materias_que_van_mal = answer[:]
                     else:
                         # Si no hay materias del perfil disponibles, usar cualquier materia que no esté en las que van bien
                         remaining = [opt for opt in question['options'] if opt not in materias_que_van_bien]
                         if remaining:
                             num_selections = min(question.get('max_selections', 3), len(remaining))
                             answer = random.sample(remaining, num_selections)
+                            materias_que_van_mal = answer[:]
                         else:
                             answer = []
+                            materias_que_van_mal = []
                 else:
                     # Generar respuesta aleatoria pero excluyendo las que van bien
                     remaining = [opt for opt in question['options'] if opt not in materias_que_van_bien]
                     if remaining:
                         num_selections = min(question.get('max_selections', 3), len(remaining))
                         answer = random.sample(remaining, num_selections)
+                        materias_que_van_mal = answer[:]
                     else:
                         answer = []
+                        materias_que_van_mal = []
             
             elif 'sectores te gustaría trabajar' in question['question']:
                 # Usar sectores del perfil
