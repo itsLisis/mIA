@@ -1,0 +1,287 @@
+{
+  "form_title": "Caracterización Fortalezas Socio-Ocupacionales",
+  "description": "Formulario basado en el formulario de Orientación Socio-Ocupacional (OSO) del Ministerio de Educación del programa 'Yo puedo ser'",
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Nombre completo",
+      "type": "text",
+      "required": true,
+      "faker_provider": "name"
+    },
+    {
+      "id": "q2",
+      "question": "¿Qué prefieres hacer en tus ratos libres?",
+      "type": "checkbox",
+      "required": true,
+      "max_selections": 2,
+      "options": [
+        "Hacer actividades artisticas",
+        "Practicar deporte o construir cosas",
+        "Buscar y proponer nuevos planes",
+        "Ordenar mi espacio y mis actividades",
+        "Escuchar y conversas con mis amigos",
+        "Leer o hacer experimentos"
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "¿Cómo te ves a ti mismo? Como alguien...",
+      "type": "checkbox",
+      "required": true,
+      "max_selections": 2,
+      "options": [
+        "Curioso. Me gusta entender el porqué de las cosas",
+        "Imaginativo. Me expreso creativamente",
+        "Hábil. Soy bueno para el trabajo manual",
+        "Líder. Me divierte tomar la iniciativa",
+        "Organizado. Prefiero tener claro lo que voy a hacer",
+        "Sociable. Disfruto compartir con otros"
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "¿En 10 años te ves trabajando con...?",
+      "type": "checkbox",
+      "required": true,
+      "max_selections": 2,
+      "options": [
+        "Equipos de trabajo, guiándolos y dirigiéndolos",
+        "Personas, enseñando o cuidando de ellas",
+        "Información y datos, para clasificar y analizar",
+        "Herramientas que me permitan construir y crear",
+        "Creaciones propias relacionadas con el arte"
+      ]
+    },
+    {
+      "id": "q5",
+      "question": "Quisiera que mi espacio laboral fuera...",
+      "type": "multiple_choice",
+      "required": true,
+      "max_selections": 1,
+      "options": [
+        "Una oficina, con mi puesto de trabajo",
+        "Al aire libre, sin tener un puesto fijo",
+        "El lugar que quisiera, como mi casa"
+      ]
+    },
+    {
+      "id": "q6",
+      "question": "Si pudiera elegir, en mi trabajo tendría que...",
+      "type": "multiple_choice",
+      "required": true,
+      "max_selections": 1,
+      "options": [
+        "Desplazarme a diferentes lugares",
+        "Permanecer en el mismo lugar"
+      ]
+    },
+    {
+      "id": "q7",
+      "question": "Quisiera un trabajo:",
+      "type": "multiple_choice",
+      "required": true,
+      "max_selections": 1,
+      "options": [
+        "Como empleado de una empresa con un contrato fijo",
+        "Como empresario, en el que soy mi propio jefe",
+        "En el que preste mis servicios a una o varias empresas"
+      ]
+    },
+    {
+      "id": "q8",
+      "question": "En mi trabajo me gustaría que mi relación con los demás fuera...",
+      "type": "multiple_choice",
+      "required": true,
+      "max_selections": 1,
+      "options": [
+        "Poca, que implique poco relacionamiento con compañeros de trabajo o clientes",
+        "Mucha, que requiera de un relacionamiento constante con mi equipo de trabajo y clientes"
+      ]
+    },
+    {
+      "id": "q9",
+      "question": "Trabajaría en un lugar en el que las actividades cotidianas estuvieran relacionadas con...",
+      "type": "checkbox",
+      "required": true,
+      "max_selections": 2,
+      "options": [
+        "Sistematizar y procesar información o números",
+        "Experimentar, investigar y producir conocimiento",
+        "Usar diferentes herramientas y tecnología",
+        "Enseñar, aconsejar o cuidar de personas",
+        "Crear por medio del diseño, dibujo o música",
+        "Dirigir y coordinar gente para desarrollar proyectos"
+      ]
+    },
+    {
+      "id": "q10",
+      "question": "Me gustaría un trabajo que se centrara en...",
+      "type": "multiple_choice",
+      "required": true,
+      "max_selections": 1,
+      "options": [
+        "El uso de herramientas y equipos para realizar acciones como controlar, construir y arreglar",
+        "El uso de datos e información, como palabras, números, símbolos y estadísticas para analizar, sistematizar e investigar",
+        "El desarrollo de ideas para realizar actividades como crear, diseñar, escribir y tocar un instrumento",
+        "El intercambio con otras personas para desarrollar acciones como enseñar, coordinar, liderar, vender y ayudar"
+      ]
+    },
+    {
+      "id": "q11",
+      "question": "Cuando trabaje, me gustaría destacarme por...",
+      "type": "checkbox",
+      "required": true,
+      "max_selections": 2,
+      "options": [
+        "Entender las necesidades de los demás y ayudarlos a solucionarlas",
+        "Actuar por mi cuenta sin necesidad de que me supervisen",
+        "Trabajar en equipo, tener en cuenta las ideas de los otros",
+        "Crear e innovar, aportar nuevas ideas y formas de hacer las cosas",
+        "Comunicarme con los demás, escuchar sus ideas y transmitir las mias"
+      ]
+    },
+    {
+      "id": "q12",
+      "question": "En mi trabajo me gustaría responder por:",
+      "type": "multiple_choice",
+      "required": true,
+      "max_selections": 1,
+      "options": [
+        "Mis resultados",
+        "Mi trabajo y mi equipo",
+        "Mi trabajo, el de mi equipo y el impacto que genere"
+      ]
+    },
+    {
+      "id": "q13",
+      "question": "¿Cuál sería el tema principal de tu trabajo?",
+      "type": "checkbox",
+      "required": true,
+      "max_selections": 3,
+      "options": [
+        "El aprendizaje de niños, jóvenes y adultos",
+        "La salud y el funcionamiento del cuerpo",
+        "El desarrollo y el funcionamiento de objetos",
+        "El diseño, música, baile, teatro y cocina",
+        "El bienestar económico de las personas y paises",
+        "El ser humano y su relación con la sociedad",
+        "La naturaleza, el universo y su funcionamiento",
+        "Los recursos naturales, el campo y los animales"
+      ]
+    },
+    {
+      "id": "q14",
+      "question": "¿En cuál de estos sectores te gustaría trabajar?",
+      "type": "checkbox",
+      "required": true,
+      "max_selections": 3,
+      "options": [
+        "Agropecuario",
+        "Administración pública",
+        "Minero y energético",
+        "Industrial manufacturero",
+        "Industrial agropecuario",
+        "Distribución y suministro de electricidad, agua y gas",
+        "Construcción",
+        "Logística y transporte",
+        "Hotelería, restaurantes y turismo",
+        "Comercio",
+        "Financiero",
+        "Educación",
+        "Salud",
+        "Cultural y artístico",
+        "Desarrollo humano y social",
+        "Servicios a la comunidad, recreación y bienestar",
+        "Investigación en ciencias básicas y aplicadas",
+        "Ambiental",
+        "Seguridad y defensa",
+        "TIC (Tecnologías de la información y la comunicación) y telecomunicaciones"
+      ]
+    },
+    {
+      "id": "q15",
+      "question": "¿Cuáles son las materias que te gustan MÁS?",
+      "type": "checkbox",
+      "required": true,
+      "max_selections": 3,
+      "options": [
+        "Física",
+        "Biología y química",
+        "Educación artística",
+        "Ciencias sociales",
+        "Educación física",
+        "Matemáticas",
+        "Lengua castellana",
+        "Ciencias económicas y políticas"
+      ]
+    },
+    {
+      "id": "q16",
+      "question": "¿Cuáles son las materias que te gustan MENOS?",
+      "type": "checkbox",
+      "required": true,
+      "max_selections": 3,
+      "options": [
+        "Biología y química",
+        "Física",
+        "Ciencias sociales",
+        "Educación artística",
+        "Educación física",
+        "Lengua castellana",
+        "Matemáticas",
+        "Ciencias económicas y políticas"
+      ]
+    },
+    {
+      "id": "q17",
+      "question": "¿En qué sientes que te va mejor? En temas relacionados con...",
+      "type": "checkbox",
+      "required": true,
+      "max_selections": 2,
+      "options": [
+        "Las palabras, escritas o habladas, esa es tu forma de expresarte",
+        "Las personas, el relacionamiento y comunicación con otros",
+        "La música, el ritmo y los sonidos, interpretarlos y entenderlos",
+        "La expresión corporal: actividades físicas como deportes, danza o actuación",
+        "Las matemáticas: el cálculo, los símbolos y la lógica",
+        "La naturaleza, con la comprensión y sensibilidad del entorno natural",
+        "La creación y representación de objetos e imágenes"
+      ]
+    },
+    {
+      "id": "q18",
+      "question": "¿En qué materias te va MEJOR?",
+      "type": "checkbox",
+      "required": true,
+      "max_selections": 3,
+      "options": [
+        "Biología y química",
+        "Física",
+        "Ciencias sociales",
+        "Educación artística",
+        "Educación física",
+        "Lengua castellana",
+        "Matemáticas",
+        "Ciencias económicas y políticas"
+      ]
+    },
+    {
+      "id": "q19",
+      "question": "¿En qué materias NO TE VA BIEN?",
+      "type": "checkbox",
+      "required": true,
+      "max_selections": 3,
+      "options": [
+        "Biología y química",
+        "Física",
+        "Ciencias sociales",
+        "Educación artística",
+        "Educación Física",
+        "Lengua castellana",
+        "Matemáticas",
+        "Ciencias económicas y políticas"
+      ]
+    }
+  ]
+}
