@@ -440,7 +440,7 @@ if __name__ == "__main__":
     
     # Generar dataset realista
     print("Generando respuestas simuladas...")
-    df_realistic = generate_realistic_responses(form_structure, num_responses=5)
+    df_realistic = generate_realistic_responses(form_structure, num_responses=100)
     
     # Separar los datos en dos DataFrames
     # 1. Datos del formulario (preferencias y aspiraciones)

@@ -1,0 +1,545 @@
+{
+  "Ingeniería de Sistemas": {
+    "perfil_personalidad": [
+      "Técnico",
+      "Investigador"
+    ],
+    "sector_preferido": [
+      "Tecnología",
+      "Industrial"
+    ],
+    "descripcion": "Diseño, desarrollo e implementación de sistemas de información y software",
+    "duracion": "5 años",
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
+    "requisitos_academicos": {
+      "matematicas": "Alto",
+      "fisica": "Alto",
+      "ciencias": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad del Norte",
+      "Universidad EAFIT"
+    ],
+    "campo_laboral": [
+      "Desarrollo de software",
+      "Administración de sistemas",
+      "Consultoría tecnológica",
+      "Gestión de proyectos TI"
+    ],
+    "salario_promedio": "3.500.000 - 8.000.000 COP"
+  },
+  "Ingeniería Civil": {
+    "perfil_personalidad": [
+      "Técnico",
+      "Organizador"
+    ],
+    "sector_preferido": [
+      "Industrial",
+      "Tecnología"
+    ],
+    "descripcion": "Diseño, construcción y mantenimiento de infraestructura civil",
+    "duracion": "5 años",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "matematicas": "Alto",
+      "fisica": "Alto",
+      "ciencias": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad del Valle",
+      "Universidad Industrial de Santander"
+    ],
+    "campo_laboral": [
+      "Construcción de edificaciones",
+      "Infraestructura vial",
+      "Gestión de proyectos",
+      "Consultoría estructural"
+    ],
+    "salario_promedio": "3.000.000 - 7.000.000 COP"
+  },
+  "Ingeniería Biomédica": {
+    "perfil_personalidad": [
+      "Técnico",
+      "Investigador"
+    ],
+    "sector_preferido": [
+      "Salud",
+      "Tecnología"
+    ],
+    "descripcion": "Aplicación de principios de ingeniería a la medicina y biología",
+    "duracion": "5 años",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "matematicas": "Alto",
+      "fisica": "Alto",
+      "biologia": "Alto"
+    },
+    "universidades": [
+      "Universidad de los Andes",
+      "Universidad EIA",
+      "Universidad CES",
+      "Universidad del Rosario"
+    ],
+    "campo_laboral": [
+      "Diseño de equipos médicos",
+      "Investigación biomédica",
+      "Gestión hospitalaria",
+      "Desarrollo de prótesis"
+    ],
+    "salario_promedio": "3.500.000 - 7.500.000 COP"
+  },
+  "Medicina": {
+    "perfil_personalidad": [
+      "Investigador",
+      "Social"
+    ],
+    "sector_preferido": [
+      "Salud"
+    ],
+    "descripcion": "Diagnóstico, tratamiento y prevención de enfermedades",
+    "duracion": "6 años + especialización",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "biologia": "Alto",
+      "quimica": "Alto",
+      "matematicas": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de Antioquia",
+      "Universidad Javeriana",
+      "Universidad del Rosario",
+      "Universidad CES"
+    ],
+    "campo_laboral": [
+      "Atención clínica",
+      "Investigación médica",
+      "Salud pública",
+      "Especialidades médicas"
+    ],
+    "salario_promedio": "4.000.000 - 15.000.000 COP"
+  },
+  "Enfermería": {
+    "perfil_personalidad": [
+      "Social",
+      "Organizador"
+    ],
+    "sector_preferido": [
+      "Salud"
+    ],
+    "descripcion": "Cuidado integral de la salud de individuos y comunidades",
+    "duracion": "4 años",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "biologia": "Alto",
+      "quimica": "Medio",
+      "ciencias_sociales": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de Antioquia",
+      "Universidad Javeriana",
+      "Universidad del Norte",
+      "Universidad El Bosque"
+    ],
+    "campo_laboral": [
+      "Atención hospitalaria",
+      "Cuidados intensivos",
+      "Salud comunitaria",
+      "Administración en salud"
+    ],
+    "salario_promedio": "2.800.000 - 5.500.000 COP"
+  },
+  "Psicología": {
+    "perfil_personalidad": [
+      "Social",
+      "Investigador"
+    ],
+    "sector_preferido": [
+      "Salud",
+      "Educativo"
+    ],
+    "descripcion": "Estudio del comportamiento humano y procesos mentales",
+    "duracion": "5 años",
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
+    "requisitos_academicos": {
+      "ciencias_sociales": "Alto",
+      "biologia": "Medio",
+      "matematicas": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad del Norte",
+      "Universidad Konrad Lorenz"
+    ],
+    "campo_laboral": [
+      "Psicología clínica",
+      "Psicología organizacional",
+      "Psicología educativa",
+      "Investigación psicológica"
+    ],
+    "salario_promedio": "2.500.000 - 6.000.000 COP"
+  },
+  "Licenciatura en Matemáticas": {
+    "perfil_personalidad": [
+      "Investigador",
+      "Social"
+    ],
+    "sector_preferido": [
+      "Educativo"
+    ],
+    "descripcion": "Formación de docentes especializados en matemáticas",
+    "duracion": "4 años",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "matematicas": "Alto",
+      "fisica": "Medio",
+      "ciencias_sociales": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad Pedagógica Nacional",
+      "Universidad de Antioquia",
+      "Universidad del Valle",
+      "Universidad Distrital"
+    ],
+    "campo_laboral": [
+      "Docencia en colegios",
+      "Docencia universitaria",
+      "Investigación educativa",
+      "Desarrollo curricular"
+    ],
+    "salario_promedio": "2.200.000 - 4.500.000 COP"
+  },
+  "Licenciatura en Educación Física": {
+    "perfil_personalidad": [
+      "Social",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Educativo"
+    ],
+    "descripcion": "Formación de docentes en educación física y deportes",
+    "duracion": "4 años",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "educacion_fisica": "Alto",
+      "biologia": "Medio",
+      "ciencias_sociales": "Medio"
+    },
+    "universidades": [
+      "Universidad Pedagógica Nacional",
+      "Universidad de Antioquia",
+      "Universidad del Valle",
+      "Universidad Libre",
+      "Universidad Minuto de Dios"
+    ],
+    "campo_laboral": [
+      "Docencia escolar",
+      "Entrenamiento deportivo",
+      "Recreación y deporte",
+      "Administración deportiva"
+    ],
+    "salario_promedio": "2.000.000 - 4.000.000 COP"
+  },
+  "Diseño Gráfico": {
+    "perfil_personalidad": [
+      "Artístico",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Cultural",
+      "Tecnología"
+    ],
+    "descripcion": "Creación de comunicación visual y elementos gráficos",
+    "duracion": "4 años",
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
+    "requisitos_academicos": {
+      "educacion_artistica": "Alto",
+      "matematicas": "Medio",
+      "ciencias_sociales": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad Jorge Tadeo Lozano",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad de Palermo"
+    ],
+    "campo_laboral": [
+      "Diseño publicitario",
+      "Diseño editorial",
+      "Diseño web",
+      "Branding corporativo"
+    ],
+    "salario_promedio": "2.500.000 - 5.500.000 COP"
+  },
+  "Música": {
+    "perfil_personalidad": [
+      "Artístico",
+      "Social"
+    ],
+    "sector_preferido": [
+      "Cultural",
+      "Educativo"
+    ],
+    "descripcion": "Formación en interpretación, composición y teoría musical",
+    "duracion": "4-5 años",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "educacion_artistica": "Alto",
+      "matematicas": "Medio",
+      "ciencias_sociales": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad Javeriana",
+      "Universidad de los Andes",
+      "Universidad EAFIT",
+      "Conservatorio del Tolima"
+    ],
+    "campo_laboral": [
+      "Interpretación musical",
+      "Docencia musical",
+      "Composición",
+      "Producción musical"
+    ],
+    "salario_promedio": "2.000.000 - 8.000.000 COP"
+  },
+  "Derecho": {
+    "perfil_personalidad": [
+      "Líder",
+      "Social"
+    ],
+    "sector_preferido": [
+      "Otros",
+      "Educativo"
+    ],
+    "descripcion": "Estudio del sistema jurídico y aplicación de la ley",
+    "duracion": "5 años",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "ciencias_sociales": "Alto",
+      "lengua_castellana": "Alto",
+      "matematicas": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad del Rosario",
+      "Universidad Externado"
+    ],
+    "campo_laboral": [
+      "Litigios y tribunales",
+      "Asesoría jurídica",
+      "Sector público",
+      "Docencia jurídica"
+    ],
+    "salario_promedio": "3.000.000 - 12.000.000 COP"
+  },
+  "Administración de Empresas": {
+    "perfil_personalidad": [
+      "Líder",
+      "Organizador"
+    ],
+    "sector_preferido": [
+      "Otros",
+      "Industrial"
+    ],
+    "descripcion": "Gestión y dirección de organizaciones empresariales",
+    "duracion": "4-5 años",
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
+    "requisitos_academicos": {
+      "matematicas": "Alto",
+      "ciencias_economicas": "Alto",
+      "ciencias_sociales": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad EAFIT",
+      "Universidad del Norte"
+    ],
+    "campo_laboral": [
+      "Gerencia empresarial",
+      "Consultoría organizacional",
+      "Emprendimiento",
+      "Recursos humanos"
+    ],
+    "salario_promedio": "3.000.000 - 10.000.000 COP"
+  },
+  "Biología": {
+    "perfil_personalidad": [
+      "Investigador",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Investigación",
+      "Salud"
+    ],
+    "descripcion": "Estudio de los seres vivos y procesos biológicos",
+    "duracion": "5 años",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "biologia": "Alto",
+      "quimica": "Alto",
+      "matematicas": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad del Valle",
+      "Universidad de Antioquia"
+    ],
+    "campo_laboral": [
+      "Investigación científica",
+      "Laboratorios clínicos",
+      "Conservación ambiental",
+      "Docencia universitaria"
+    ],
+    "salario_promedio": "2.800.000 - 6.500.000 COP"
+  },
+  "Química": {
+    "perfil_personalidad": [
+      "Investigador",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Investigación",
+      "Industrial"
+    ],
+    "descripcion": "Estudio de la materia, sus propiedades y transformaciones",
+    "duracion": "5 años",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "quimica": "Alto",
+      "matematicas": "Alto",
+      "fisica": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad de Antioquia",
+      "Universidad del Valle",
+      "Universidad Industrial de Santander"
+    ],
+    "campo_laboral": [
+      "Investigación química",
+      "Industria farmacéutica",
+      "Control de calidad",
+      "Desarrollo de productos"
+    ],
+    "salario_promedio": "3.000.000 - 7.000.000 COP"
+  },
+  "Ingeniería de Software": {
+    "perfil_personalidad": [
+      "Técnico",
+      "Investigador"
+    ],
+    "sector_preferido": [
+      "Tecnología"
+    ],
+    "descripcion": "Desarrollo y mantenimiento de sistemas de software",
+    "duracion": "4-5 años",
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
+    "requisitos_academicos": {
+      "matematicas": "Alto",
+      "fisica": "Medio",
+      "ciencias": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad EAFIT",
+      "Universidad del Norte"
+    ],
+    "campo_laboral": [
+      "Desarrollo de aplicaciones",
+      "Arquitectura de software",
+      "DevOps",
+      "Gestión de proyectos TI"
+    ],
+    "salario_promedio": "3.800.000 - 9.000.000 COP"
+  },
+  "Diseño Industrial": {
+    "perfil_personalidad": [
+      "Artístico",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Industrial",
+      "Cultural"
+    ],
+    "descripcion": "Diseño de productos industriales y objetos de uso cotidiano",
+    "duracion": "5 años",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "educacion_artistica": "Alto",
+      "matematicas": "Medio",
+      "fisica": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad Jorge Tadeo Lozano",
+      "Universidad de Palermo"
+    ],
+    "campo_laboral": [
+      "Diseño de productos",
+      "Innovación industrial",
+      "Consultoría en diseño",
+      "Desarrollo de prototipos"
+    ],
+    "salario_promedio": "3.200.000 - 7.500.000 COP"
+  }
+}
