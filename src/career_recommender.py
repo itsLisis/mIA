@@ -14,8 +14,8 @@ class CareerRecommender:
     """
     
     def __init__(self, 
-                 personality_model_path: str = "models/vocacional_model_perfil_personalidad.pkl",
-                 sector_model_path: str = "models/vocacional_model_sector_preferido.pkl"):
+                 personality_model_path: str = "models/improved_vocacional_model_perfil_personalidad.pkl",
+                 sector_model_path: str = "models/improved_vocacional_model_sector_preferido.pkl"):
         """
         Inicializa el sistema de recomendación
         
@@ -31,14 +31,24 @@ class CareerRecommender:
         self.personality_model_data = self._load_model(personality_model_path)
         self.sector_model_data = self._load_model(sector_model_path)
         
-        # Extraer componentes de los modelos
-        self.personality_model = self.personality_model_data['model']
-        self.personality_encoder = self.personality_model_data['label_encoder']
-        self.personality_features = self.personality_model_data['feature_columns']
+        # Adaptar para modelos guardados como objeto directo
+        if isinstance(self.personality_model_data, dict):
+            self.personality_model = self.personality_model_data['model']
+            self.personality_encoder = self.personality_model_data['label_encoder']
+            self.personality_features = self.personality_model_data['feature_columns']
+        else:
+            self.personality_model = self.personality_model_data
+            self.personality_encoder = None
+            self.personality_features = None
         
-        self.sector_model = self.sector_model_data['model']
-        self.sector_encoder = self.sector_model_data['label_encoder']
-        self.sector_features = self.sector_model_data['feature_columns']
+        if isinstance(self.sector_model_data, dict):
+            self.sector_model = self.sector_model_data['model']
+            self.sector_encoder = self.sector_model_data['label_encoder']
+            self.sector_features = self.sector_model_data['feature_columns']
+        else:
+            self.sector_model = self.sector_model_data
+            self.sector_encoder = None
+            self.sector_features = None
     
     def _load_model(self, model_path: str) -> Dict:
         """

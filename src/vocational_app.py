@@ -14,7 +14,7 @@ from career_recommender import CareerRecommender
 class VocationalGuidanceApp:
     def __init__(self):
         self.recommender = CareerRecommender()
-        self.dataset_path = 'data/dataset_completo.csv'
+        self.dataset_path = '../data/dataset_completo.csv'
         
     def load_student_data(self):
         """Cargar datos completos del estudiante desde el CSV"""
@@ -58,37 +58,30 @@ class VocationalGuidanceApp:
     
     def prepare_student_data(self, student_row):
         """Preparar datos del estudiante para el sistema de recomendación"""
-        # Extraer datos académicos (notas)
+        # Usar los nombres de columna originales del dataset
+        features = [
+            # Numéricas
+            'Física - Promedio', 'Biología y química - Promedio', 'Educación artística - Promedio',
+            'Ciencias sociales - Promedio', 'Educación física - Promedio', 'Matemáticas - Promedio',
+            'Lengua castellana - Promedio', 'Ciencias económicas y políticas - Promedio',
+            'Promedio General', 'Cantidad Materias Favoritas', 'Cantidad Materias No Favoritas',
+            'Cantidad Materias Buenas', 'Cantidad Materias Malas',
+            # Categóricas
+            'Rendimiento General', 'Física - Rendimiento', 'Biología y química - Rendimiento',
+            'Educación artística - Rendimiento', 'Ciencias sociales - Rendimiento',
+            'Educación física - Rendimiento', 'Matemáticas - Rendimiento',
+            'Lengua castellana - Rendimiento', 'Ciencias económicas y políticas - Rendimiento',
+            'Coherencia Gustos-Rendimiento',
+            # Derivadas (pueden no estar presentes en el CSV, pero si están, se incluyen)
+            'ratio_matematicas_ciencias', 'ratio_ciencias_sociales', 'std_notas', 'range_notas',
+            'fortaleza_cientifica', 'fortaleza_humanistica', 'fortaleza_artistica',
+            'balance_academico', 'coherencia_numerica', 'rendimiento_alto_count',
+            'rendimiento_medio_count', 'rendimiento_bajo_count'
+        ]
         academic_data = {}
-        subjects = ['Física', 'Biología y química', 'Educación artística', 'Ciencias sociales', 
-                   'Educación física', 'Matemáticas', 'Lengua castellana', 'Ciencias económicas y políticas']
-        
-        for subject in subjects:
-            # Promedios por materia
-            avg_col = f"{subject} - Promedio"
-            if avg_col in student_row:
-                academic_data[f"promedio_{subject.lower().replace(' ', '_').replace('ó', 'o').replace('é', 'e')}"] = student_row[avg_col]
-            
-            # Rendimiento por materia
-            rend_col = f"{subject} - Rendimiento"
-            if rend_col in student_row:
-                academic_data[f"rendimiento_{subject.lower().replace(' ', '_').replace('ó', 'o').replace('é', 'e')}"] = student_row[rend_col]
-        
-        # Promedio general
-        if 'Promedio General' in student_row:
-            academic_data['promedio_general'] = student_row['Promedio General']
-        
-        # Contadores
-        counters = ['Cantidad Materias Favoritas', 'Cantidad Materias No Favoritas', 
-                   'Cantidad Materias Buenas', 'Cantidad Materias Malas']
-        for counter in counters:
-            if counter in student_row:
-                academic_data[counter.lower().replace(' ', '_')] = student_row[counter]
-        
-        # Coherencia
-        if 'Coherencia Gustos-Rendimiento' in student_row:
-            academic_data['coherencia_gustos_rendimiento'] = student_row['Coherencia Gustos-Rendimiento']
-        
+        for feature in features:
+            if feature in student_row:
+                academic_data[feature] = student_row[feature]
         return academic_data
     
     def display_student_profile(self, student_row):

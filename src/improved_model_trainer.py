@@ -20,7 +20,7 @@ class ImprovedVocacionalModelTrainer:
     Entrenador mejorado de modelos vocacionales con técnicas avanzadas
     """
     
-    def __init__(self, data_path: str = "data/dataset_completo.csv"):
+    def __init__(self, data_path: str = "../data/dataset_completo_clean.csv"):
         """
         Inicializa el entrenador mejorado
         
@@ -128,6 +128,14 @@ class ImprovedVocacionalModelTrainer:
         Selección avanzada de características
         """
         print(f"Seleccionando features para predecir: {target_variable}")
+
+        # Forzar conversión a numérico de las columnas problemáticas
+        for col in ['Cantidad Materias Favoritas', 'Cantidad Materias No Favoritas', 'Cantidad Materias Malas']:
+            if col in self.df.columns:
+                self.df[col] = pd.to_numeric(self.df[col], errors='coerce').fillna(0)
+        # Depuración: mostrar tipos y primeros valores
+        print(self.df[['Cantidad Materias Favoritas', 'Cantidad Materias No Favoritas', 'Cantidad Materias Malas']].dtypes)
+        print(self.df[['Cantidad Materias Favoritas', 'Cantidad Materias No Favoritas', 'Cantidad Materias Malas']].head(10))
         
         # Características numéricas base
         numeric_features = [
@@ -168,6 +176,9 @@ class ImprovedVocacionalModelTrainer:
         feature_columns = available_numeric + available_categorical + available_derived
         self.X = self.df[feature_columns].copy()
         
+        # Limpiar datos de características
+        self._clean_features()
+        
         # Verificar variable objetivo
         if target_variable not in self.df.columns:
             raise ValueError(f"La variable objetivo '{target_variable}' no existe en el dataset")
@@ -179,6 +190,34 @@ class ImprovedVocacionalModelTrainer:
         print(self.y.value_counts())
         
         return self.X, self.y
+    
+    def _clean_features(self) -> None:
+        """
+        Limpia las características eliminando valores problemáticos
+        """
+        print("Limpiando características...")
+        
+        # Reemplazar valores infinitos
+        self.X = self.X.replace([np.inf, -np.inf], np.nan)
+        
+        # Reemplazar valores NaN en columnas numéricas con la mediana
+        numeric_columns = self.X.select_dtypes(include=[np.number]).columns
+        for col in numeric_columns:
+            if self.X[col].isnull().any():
+                median_val = self.X[col].median()
+                if pd.isna(median_val):
+                    median_val = 0.0  # Valor por defecto si la mediana también es NaN
+                self.X[col] = self.X[col].fillna(median_val)
+                print(f"  - Reemplazados valores NaN en {col} con mediana: {median_val:.2f}")
+        
+        # Reemplazar valores NaN en columnas categóricas con 'Desconocido'
+        categorical_columns = self.X.select_dtypes(include=['object']).columns
+        for col in categorical_columns:
+            if self.X[col].isnull().any():
+                self.X[col] = self.X[col].fillna('Desconocido')
+                print(f"  - Reemplazados valores NaN en {col} con 'Desconocido'")
+        
+        print("Características limpiadas exitosamente")
     
     def encode_categorical_features(self) -> pd.DataFrame:
         """
@@ -360,6 +399,18 @@ class ImprovedVocacionalModelTrainer:
         
         # Búsqueda de hiperparámetros
         rf = RandomForestClassifier(random_state=42)
+        
+        # Ajustar CV según el número de muestras
+        n_samples = len(self.X_train)
+        if n_samples < 10:
+            cv_folds = 2
+        elif n_samples < 50:
+            cv_folds = 3
+        else:
+            cv_folds = 5
+        
+        cv = StratifiedKFold(n_splits=cv_folds, shuffle=True, random_state=42)
+        
         grid_search = GridSearchCV(
             rf, param_grid, cv=cv, scoring='accuracy', n_jobs=-1, verbose=1
         )
@@ -387,7 +438,15 @@ class ImprovedVocacionalModelTrainer:
         precision, recall, f1, _ = precision_recall_fscore_support(self.y_test, y_pred, average='weighted')
         
         # Validación cruzada
-        cv_scores = cross_val_score(self.best_model, self.X_train, self.y_train, cv=5, scoring='accuracy')
+        n_samples = len(self.X_train)
+        if n_samples < 10:
+            cv_folds = 2
+        elif n_samples < 50:
+            cv_folds = 3
+        else:
+            cv_folds = 5
+        
+        cv_scores = cross_val_score(self.best_model, self.X_train, self.y_train, cv=cv_folds, scoring='accuracy')
         
         # Reporte de clasificación
         if hasattr(self.label_encoder, 'classes_'):
