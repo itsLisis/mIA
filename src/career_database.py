@@ -754,6 +754,195 @@ class CareerDatabase:
                 "salario_promedio": "3.800.000 - 9.000.000 COP"
             },
             
+            "Tecnología en Desarrollo de Software": {
+                "perfil_personalidad": ["Técnico", "Investigador"],
+                "sector_preferido": ["Tecnología"],
+                "descripcion": "Formación técnica especializada en desarrollo de software y aplicaciones",
+                "duracion": "3 años",
+                "modalidad": ["Presencial", "Virtual"],
+                "requisitos_academicos": {
+                    "matematicas": "Medio",
+                    "fisica": "Medio",
+                    "ciencias": "Medio"
+                },
+                "universidades": [
+                    "SENA",
+                    "Universidad Minuto de Dios",
+                    "Politécnico Grancolombiano",
+                    "Universidad de San Buenaventura",
+                    "Fundación Universitaria del Área Andina"
+                ],
+                "campo_laboral": [
+                    "Programación de aplicaciones",
+                    "Desarrollo web",
+                    "Soporte técnico",
+                    "Testing de software"
+                ],
+                "salario_promedio": "2.500.000 - 5.500.000 COP"
+            },
+            
+            "Ingeniería en Automatización": {
+                "perfil_personalidad": ["Técnico", "Investigador"],
+                "sector_preferido": ["Industrial", "Tecnología"],
+                "descripcion": "Diseño e implementación de sistemas automatizados para la industria",
+                "duracion": "5 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "matematicas": "Alto",
+                    "fisica": "Alto",
+                    "ciencias": "Medio"
+                },
+                "universidades": [
+                    "Universidad Nacional de Colombia",
+                    "Universidad de los Andes",
+                    "Universidad EAFIT",
+                    "Universidad Industrial de Santander",
+                    "Universidad Pontificia Bolivariana"
+                ],
+                "campo_laboral": [
+                    "Automatización industrial",
+                    "Robótica",
+                    "Control de procesos",
+                    "Sistemas SCADA"
+                ],
+                "salario_promedio": "3.500.000 - 8.000.000 COP"
+            },
+            
+            "Tecnología Industrial": {
+                "perfil_personalidad": ["Técnico", "Organizador"],
+                "sector_preferido": ["Industrial"],
+                "descripcion": "Optimización de procesos productivos y gestión industrial",
+                "duracion": "3 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "matematicas": "Medio",
+                    "fisica": "Medio",
+                    "ciencias": "Medio"
+                },
+                "universidades": [
+                    "SENA",
+                    "Universidad Minuto de Dios",
+                    "Politécnico Grancolombiano",
+                    "Universidad de San Buenaventura",
+                    "Fundación Universitaria del Área Andina"
+                ],
+                "campo_laboral": [
+                    "Supervisión de producción",
+                    "Control de calidad",
+                    "Gestión de procesos",
+                    "Mantenimiento industrial"
+                ],
+                "salario_promedio": "2.800.000 - 5.800.000 COP"
+            },
+            
+            "Ingeniería Mecatrónica": {
+                "perfil_personalidad": ["Técnico", "Investigador"],
+                "sector_preferido": ["Industrial", "Tecnología"],
+                "descripcion": "Integración de sistemas mecánicos, electrónicos y de control",
+                "duracion": "5 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "matematicas": "Alto",
+                    "fisica": "Alto",
+                    "ciencias": "Medio"
+                },
+                "universidades": [
+                    "Universidad Nacional de Colombia",
+                    "Universidad de los Andes",
+                    "Universidad EAFIT",
+                    "Universidad Industrial de Santander",
+                    "Universidad Pontificia Bolivariana"
+                ],
+                "campo_laboral": [
+                    "Robótica industrial",
+                    "Automatización",
+                    "Sistemas embebidos",
+                    "Ingeniería de control"
+                ],
+                "salario_promedio": "3.600.000 - 8.200.000 COP"
+            },
+            
+            "Tecnología en Automatización": {
+                "perfil_personalidad": ["Técnico", "Organizador"],
+                "sector_preferido": ["Industrial", "Tecnología"],
+                "descripcion": "Implementación y mantenimiento de sistemas automatizados",
+                "duracion": "3 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "matematicas": "Medio",
+                    "fisica": "Medio",
+                    "ciencias": "Medio"
+                },
+                "universidades": [
+                    "SENA",
+                    "Universidad Minuto de Dios",
+                    "Politécnico Grancolombiano",
+                    "Universidad de San Buenaventura",
+                    "Fundación Universitaria del Área Andina"
+                ],
+                "campo_laboral": [
+                    "Operación de sistemas automatizados",
+                    "Mantenimiento de equipos",
+                    "Programación de PLC",
+                    "Instrumentación industrial"
+                ],
+                "salario_promedio": "2.600.000 - 5.200.000 COP"
+            },
+            
+            "Ingeniería de Datos": {
+                "perfil_personalidad": ["Técnico", "Investigador"],
+                "sector_preferido": ["Tecnología"],
+                "descripcion": "Gestión, procesamiento y análisis de grandes volúmenes de datos",
+                "duracion": "4-5 años",
+                "modalidad": ["Presencial", "Virtual"],
+                "requisitos_academicos": {
+                    "matematicas": "Alto",
+                    "fisica": "Medio",
+                    "ciencias": "Alto"
+                },
+                "universidades": [
+                    "Universidad Nacional de Colombia",
+                    "Universidad de los Andes",
+                    "Universidad Javeriana",
+                    "Universidad EAFIT",
+                    "Universidad del Norte"
+                ],
+                "campo_laboral": [
+                    "Big Data",
+                    "Data Science",
+                    "Machine Learning",
+                    "Business Intelligence"
+                ],
+                "salario_promedio": "4.000.000 - 10.000.000 COP"
+            },
+            
+            "Tecnología en Redes y Telecomunicaciones": {
+                "perfil_personalidad": ["Técnico", "Investigador"],
+                "sector_preferido": ["Tecnología"],
+                "descripcion": "Administración y soporte de infraestructura de redes y comunicaciones",
+                "duracion": "3 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "matematicas": "Medio",
+                    "fisica": "Medio",
+                    "ciencias": "Medio"
+                },
+                "universidades": [
+                    "SENA",
+                    "Universidad Minuto de Dios",
+                    "Politécnico Grancolombiano",
+                    "Universidad de San Buenaventura",
+                    "Fundación Universitaria del Área Andina"
+                ],
+                "campo_laboral": [
+                    "Administración de redes",
+                    "Soporte técnico",
+                    "Ciberseguridad",
+                    "Infraestructura TI"
+                ],
+                "salario_promedio": "2.700.000 - 5.500.000 COP"
+            },
+            
             "Ingeniería en Telecomunicaciones": {
                 "perfil_personalidad": ["Técnico", "Investigador"],
                 "sector_preferido": ["Tecnología"],
@@ -944,6 +1133,223 @@ class CareerDatabase:
                 "salario_promedio": "2.800.000 - 6.500.000 COP"
             },
             
+            # CARRERAS ARTÍSTICAS Y CREATIVAS AMPLIADAS
+            "Artes Visuales": {
+                "perfil_personalidad": ["Artístico", "Investigador"],
+                "sector_preferido": ["Cultural", "Artístico"],
+                "descripcion": "Creación y expresión artística a través de medios visuales",
+                "duracion": "4 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "educacion_artistica": "Alto",
+                    "lengua_castellana": "Medio",
+                    "ciencias_sociales": "Medio"
+                },
+                "universidades": [
+                    "Universidad Nacional de Colombia",
+                    "Universidad de los Andes",
+                    "Universidad Jorge Tadeo Lozano",
+                    "Universidad de Bellas Artes",
+                    "Universidad de Antioquia"
+                ],
+                "campo_laboral": [
+                    "Artista plástico",
+                    "Ilustración",
+                    "Curador de arte",
+                    "Docencia artística"
+                ],
+                "salario_promedio": "2.200.000 - 5.500.000 COP"
+            },
+            
+            "Artes Escénicas": {
+                "perfil_personalidad": ["Artístico", "Social"],
+                "sector_preferido": ["Cultural", "Artístico"],
+                "descripcion": "Formación integral en teatro, danza y expresión corporal",
+                "duracion": "4 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "educacion_artistica": "Alto",
+                    "educacion_fisica": "Medio",
+                    "lengua_castellana": "Medio"
+                },
+                "universidades": [
+                    "Universidad Nacional de Colombia",
+                    "Universidad de Antioquia",
+                    "Universidad Jorge Tadeo Lozano",
+                    "Academia Superior de Artes de Bogotá",
+                    "Universidad del Valle"
+                ],
+                "campo_laboral": [
+                    "Actor de teatro/cine/TV",
+                    "Director escénico",
+                    "Coreógrafo",
+                    "Docencia artística"
+                ],
+                "salario_promedio": "2.000.000 - 6.000.000 COP"
+            },
+            
+            "Cine y Televisión": {
+                "perfil_personalidad": ["Artístico", "Técnico"],
+                "sector_preferido": ["Cultural", "Tecnología"],
+                "descripcion": "Producción audiovisual para cine, televisión y medios digitales",
+                "duracion": "4 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "educacion_artistica": "Alto",
+                    "lengua_castellana": "Alto",
+                    "ciencias_sociales": "Medio"
+                },
+                "universidades": [
+                    "Universidad Nacional de Colombia",
+                    "Universidad Jorge Tadeo Lozano",
+                    "Universidad de los Andes",
+                    "Pontificia Universidad Javeriana",
+                    "Universidad del Norte"
+                ],
+                "campo_laboral": [
+                    "Director de cine/TV",
+                    "Productor audiovisual",
+                    "Editor de video",
+                    "Guionista"
+                ],
+                "salario_promedio": "2.500.000 - 8.000.000 COP"
+            },
+            
+            "Diseño de Modas": {
+                "perfil_personalidad": ["Artístico", "Organizador"],
+                "sector_preferido": ["Cultural", "Industrial"],
+                "descripcion": "Creación y desarrollo de prendas y accesorios de moda",
+                "duracion": "4 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "educacion_artistica": "Alto",
+                    "matematicas": "Medio",
+                    "ciencias_sociales": "Medio"
+                },
+                "universidades": [
+                    "Universidad Jorge Tadeo Lozano",
+                    "Academia Superior de Artes de Bogotá",
+                    "Universidad de Bellas Artes",
+                    "Fundación Universitaria del Área Andina",
+                    "Universidad de Bogotá Jorge Tadeo Lozano"
+                ],
+                "campo_laboral": [
+                    "Diseñador de modas",
+                    "Estilista",
+                    "Consultor de imagen",
+                    "Director creativo"
+                ],
+                "salario_promedio": "2.300.000 - 6.500.000 COP"
+            },
+            
+            "Fotografía": {
+                "perfil_personalidad": ["Artístico", "Técnico"],
+                "sector_preferido": ["Cultural", "Servicios"],
+                "descripcion": "Arte y técnica de la captura y composición de imágenes",
+                "duracion": "3-4 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "educacion_artistica": "Alto",
+                    "ciencias_sociales": "Medio",
+                    "fisica": "Medio"
+                },
+                "universidades": [
+                    "Universidad Jorge Tadeo Lozano",
+                    "Academia Superior de Artes de Bogotá",
+                    "Universidad de Bellas Artes",
+                    "Fundación Universitaria del Área Andina",
+                    "Universidad Nacional de Colombia"
+                ],
+                "campo_laboral": [
+                    "Fotógrafo profesional",
+                    "Fotoperiodismo",
+                    "Fotografía publicitaria",
+                    "Fotografía artística"
+                ],
+                "salario_promedio": "2.000.000 - 5.500.000 COP"
+            },
+            
+            "Publicidad": {
+                "perfil_personalidad": ["Artístico", "Social"],
+                "sector_preferido": ["Cultural", "Financiero"],
+                "descripcion": "Creación de estrategias y contenidos publicitarios",
+                "duracion": "4 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "educacion_artistica": "Alto",
+                    "lengua_castellana": "Alto",
+                    "ciencias_sociales": "Alto"
+                },
+                "universidades": [
+                    "Universidad Jorge Tadeo Lozano",
+                    "Universidad de los Andes",
+                    "Universidad Javeriana",
+                    "Universidad del Norte",
+                    "Universidad Externado"
+                ],
+                "campo_laboral": [
+                    "Director creativo",
+                    "Redactor publicitario",
+                    "Director de arte",
+                    "Account manager"
+                ],
+                "salario_promedio": "2.800.000 - 7.500.000 COP"
+            },
+            
+            "Literatura": {
+                "perfil_personalidad": ["Artístico", "Investigador"],
+                "sector_preferido": ["Cultural", "Educativo"],
+                "descripcion": "Estudio y creación literaria, análisis de textos y escritura creativa",
+                "duracion": "4 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "lengua_castellana": "Alto",
+                    "ciencias_sociales": "Alto",
+                    "educacion_artistica": "Medio"
+                },
+                "universidades": [
+                    "Universidad Nacional de Colombia",
+                    "Universidad de los Andes",
+                    "Universidad Javeriana",
+                    "Universidad del Valle",
+                    "Universidad de Antioquia"
+                ],
+                "campo_laboral": [
+                    "Escritor",
+                    "Editor literario",
+                    "Crítico literario",
+                    "Docencia universitaria"
+                ],
+                "salario_promedio": "2.200.000 - 5.000.000 COP"
+            },
+            
+            "Animación Digital": {
+                "perfil_personalidad": ["Artístico", "Técnico"],
+                "sector_preferido": ["Tecnología", "Cultural"],
+                "descripcion": "Creación de contenidos animados para medios digitales",
+                "duracion": "4 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "educacion_artistica": "Alto",
+                    "matematicas": "Medio",
+                    "fisica": "Medio"
+                },
+                "universidades": [
+                    "Universidad Jorge Tadeo Lozano",
+                    "Universidad de los Andes",
+                    "Universidad Javeriana",
+                    "Universidad EAFIT",
+                    "Universidad del Norte"
+                ],
+                "campo_laboral": [
+                    "Animador 2D/3D",
+                    "Diseñador de videojuegos",
+                    "Motion graphics",
+                    "VFX artist"
+                ],
+                "salario_promedio": "2.800.000 - 7.000.000 COP"
+            },
+            
             # CARRERAS DE SERVICIOS Y TURISMO
             "Administración Turística y Hotelera": {
                 "perfil_personalidad": ["Social", "Organizador"],
@@ -997,6 +1403,223 @@ class CareerDatabase:
                     "Investigación culinaria"
                 ],
                 "salario_promedio": "2.800.000 - 6.000.000 COP"
+            },
+            
+            # CARRERAS TÉCNICAS ADICIONALES
+            "Tecnología en Electrónica": {
+                "perfil_personalidad": ["Técnico", "Investigador"],
+                "sector_preferido": ["Tecnología", "Industrial"],
+                "descripcion": "Diseño, instalación y mantenimiento de sistemas electrónicos",
+                "duracion": "3 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "matematicas": "Medio",
+                    "fisica": "Alto",
+                    "ciencias": "Medio"
+                },
+                "universidades": [
+                    "SENA",
+                    "Universidad Minuto de Dios",
+                    "Politécnico Grancolombiano",
+                    "Universidad de San Buenaventura",
+                    "Fundación Universitaria del Área Andina"
+                ],
+                "campo_laboral": [
+                    "Mantenimiento de equipos electrónicos",
+                    "Instalación de sistemas",
+                    "Soporte técnico",
+                    "Control de calidad"
+                ],
+                "salario_promedio": "2.400.000 - 5.000.000 COP"
+            },
+            
+            "Tecnología en Mecánica Automotriz": {
+                "perfil_personalidad": ["Técnico", "Organizador"],
+                "sector_preferido": ["Industrial"],
+                "descripcion": "Diagnóstico, mantenimiento y reparación de vehículos automotores",
+                "duracion": "3 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "matematicas": "Medio",
+                    "fisica": "Medio",
+                    "ciencias": "Medio"
+                },
+                "universidades": [
+                    "SENA",
+                    "Universidad Minuto de Dios",
+                    "Politécnico Grancolombiano",
+                    "Fundación Universitaria del Área Andina",
+                    "Corporación Universitaria Americana"
+                ],
+                "campo_laboral": [
+                    "Talleres automotrices",
+                    "Concesionarios",
+                    "Transporte público",
+                    "Consultoría automotriz"
+                ],
+                "salario_promedio": "2.200.000 - 4.800.000 COP"
+            },
+            
+            "Ingeniería de Producción": {
+                "perfil_personalidad": ["Técnico", "Organizador"],
+                "sector_preferido": ["Industrial"],
+                "descripcion": "Optimización de sistemas productivos y cadenas de suministro",
+                "duracion": "5 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "matematicas": "Alto",
+                    "fisica": "Medio",
+                    "ciencias_economicas": "Medio"
+                },
+                "universidades": [
+                    "Universidad Nacional de Colombia",
+                    "Universidad EAFIT",
+                    "Universidad Pontificia Bolivariana",
+                    "Universidad Industrial de Santander",
+                    "Universidad del Norte"
+                ],
+                "campo_laboral": [
+                    "Gestión de producción",
+                    "Logística empresarial",
+                    "Optimización de procesos",
+                    "Control de inventarios"
+                ],
+                "salario_promedio": "3.200.000 - 7.200.000 COP"
+            },
+            
+            "Tecnología en Logística": {
+                "perfil_personalidad": ["Organizador", "Técnico"],
+                "sector_preferido": ["Industrial", "Servicios"],
+                "descripcion": "Gestión de cadenas de suministro y distribución",
+                "duracion": "3 años",
+                "modalidad": ["Presencial", "Virtual"],
+                "requisitos_academicos": {
+                    "matematicas": "Medio",
+                    "ciencias_economicas": "Medio",
+                    "ciencias_sociales": "Medio"
+                },
+                "universidades": [
+                    "SENA",
+                    "Universidad Minuto de Dios",
+                    "Politécnico Grancolombiano",
+                    "Fundación Universitaria del Área Andina",
+                    "Corporación Universitaria Americana"
+                ],
+                "campo_laboral": [
+                    "Gestión de almacenes",
+                    "Distribución y transporte",
+                    "Comercio exterior",
+                    "Supply chain"
+                ],
+                "salario_promedio": "2.500.000 - 5.200.000 COP"
+            },
+            
+            "Ingeniería Industrial": {
+                "perfil_personalidad": ["Técnico", "Organizador"],
+                "sector_preferido": ["Industrial"],
+                "descripcion": "Optimización de recursos y procesos en sistemas productivos",
+                "duracion": "5 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "matematicas": "Alto",
+                    "fisica": "Medio",
+                    "ciencias_economicas": "Medio"
+                },
+                "universidades": [
+                    "Universidad Nacional de Colombia",
+                    "Universidad de los Andes",
+                    "Universidad EAFIT",
+                    "Universidad Pontificia Bolivariana",
+                    "Universidad Industrial de Santander"
+                ],
+                "campo_laboral": [
+                    "Ingeniería de métodos",
+                    "Gestión de calidad",
+                    "Productividad empresarial",
+                    "Consultoría industrial"
+                ],
+                "salario_promedio": "3.400.000 - 7.800.000 COP"
+            },
+            
+            "Tecnología en Construcción": {
+                "perfil_personalidad": ["Técnico", "Organizador"],
+                "sector_preferido": ["Industrial"],
+                "descripcion": "Supervisión y ejecución de proyectos de construcción",
+                "duracion": "3 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "matematicas": "Medio",
+                    "fisica": "Medio",
+                    "ciencias": "Medio"
+                },
+                "universidades": [
+                    "SENA",
+                    "Universidad Minuto de Dios",
+                    "Politécnico Grancolombiano",
+                    "Fundación Universitaria del Área Andina",
+                    "Universidad de San Buenaventura"
+                ],
+                "campo_laboral": [
+                    "Supervisión de obras",
+                    "Control de calidad en construcción",
+                    "Administración de proyectos",
+                    "Topografía"
+                ],
+                "salario_promedio": "2.600.000 - 5.400.000 COP"
+            },
+            
+            "Ingeniería Electrónica": {
+                "perfil_personalidad": ["Técnico", "Investigador"],
+                "sector_preferido": ["Tecnología", "Industrial"],
+                "descripcion": "Diseño y desarrollo de sistemas electrónicos y de comunicación",
+                "duracion": "5 años",
+                "modalidad": ["Presencial"],
+                "requisitos_academicos": {
+                    "matematicas": "Alto",
+                    "fisica": "Alto",
+                    "ciencias": "Medio"
+                },
+                "universidades": [
+                    "Universidad Nacional de Colombia",
+                    "Universidad de los Andes",
+                    "Universidad EAFIT",
+                    "Universidad Pontificia Bolivariana",
+                    "Universidad Industrial de Santander"
+                ],
+                "campo_laboral": [
+                    "Diseño de circuitos",
+                    "Sistemas embebidos",
+                    "Telecomunicaciones",
+                    "Instrumentación electrónica"
+                ],
+                "salario_promedio": "3.600.000 - 8.500.000 COP"
+            },
+            
+            "Tecnología en Análisis de Sistemas": {
+                "perfil_personalidad": ["Técnico", "Investigador"],
+                "sector_preferido": ["Tecnología"],
+                "descripcion": "Análisis, diseño e implementación de sistemas de información",
+                "duracion": "3 años",
+                "modalidad": ["Presencial", "Virtual"],
+                "requisitos_academicos": {
+                    "matematicas": "Medio",
+                    "fisica": "Medio",
+                    "ciencias": "Medio"
+                },
+                "universidades": [
+                    "SENA",
+                    "Universidad Minuto de Dios",
+                    "Politécnico Grancolombiano",
+                    "Fundación Universitaria del Área Andina",
+                    "Universidad de San Buenaventura"
+                ],
+                "campo_laboral": [
+                    "Análisis de requerimientos",
+                    "Diseño de bases de datos",
+                    "Testing de sistemas",
+                    "Soporte técnico especializado"
+                ],
+                "salario_promedio": "2.800.000 - 5.800.000 COP"
             }
         }
         

@@ -533,7 +533,7 @@ if __name__ == "__main__":
     # Generar dataset realista
     print("Generando respuestas simuladas...")
     # Puedes cambiar este número para generar más o menos datos
-    num_responses = 10000  # Aumentado significativamente para tener suficientes muestras por clase
+    num_responses = 7200  # Balanceado para tener suficientes muestras por clase
     df_realistic = generate_realistic_responses(form_structure, num_responses=num_responses)
     
     # Separar los datos en dos DataFrames

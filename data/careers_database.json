@@ -1,10 +1,19 @@
 {
   "Ingeniería de Sistemas": {
-    "perfil_personalidad": ["Técnico", "Investigador"],
-    "sector_preferido": ["Tecnología", "Industrial"],
+    "perfil_personalidad": [
+      "Técnico",
+      "Investigador"
+    ],
+    "sector_preferido": [
+      "Tecnología",
+      "Industrial"
+    ],
     "descripcion": "Diseño, desarrollo e implementación de sistemas de información y software",
     "duracion": "5 años",
-    "modalidad": ["Presencial", "Virtual"],
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
     "requisitos_academicos": {
       "matematicas": "Alto",
       "fisica": "Alto",
@@ -21,16 +30,34 @@
       "Desarrollo de software",
       "Administración de sistemas",
       "Consultoría tecnológica",
-      "Gestión de proyectos TI"
+      "Gestión de proyectos TI",
+      "Inteligencia artificial",
+      "Ciberseguridad"
     ],
-    "salario_promedio": "3.500.000 - 8.000.000 COP"
+    "salario_promedio": "3.500.000 - 8.000.000 COP",
+    "entorno_trabajo": [
+      "Oficina",
+      "Remoto"
+    ],
+    "interaccion_social": [
+      "Baja",
+      "Media"
+    ]
   },
   "Ingeniería Civil": {
-    "perfil_personalidad": ["Técnico", "Organizador"],
-    "sector_preferido": ["Industrial", "Tecnología"],
+    "perfil_personalidad": [
+      "Técnico",
+      "Organizador"
+    ],
+    "sector_preferido": [
+      "Industrial",
+      "Tecnología"
+    ],
     "descripcion": "Diseño, construcción y mantenimiento de infraestructura civil",
     "duracion": "5 años",
-    "modalidad": ["Presencial"],
+    "modalidad": [
+      "Presencial"
+    ],
     "requisitos_academicos": {
       "matematicas": "Alto",
       "fisica": "Alto",
@@ -52,11 +79,19 @@
     "salario_promedio": "3.000.000 - 7.000.000 COP"
   },
   "Ingeniería Biomédica": {
-    "perfil_personalidad": ["Técnico", "Investigador"],
-    "sector_preferido": ["Salud", "Tecnología"],
+    "perfil_personalidad": [
+      "Técnico",
+      "Investigador"
+    ],
+    "sector_preferido": [
+      "Salud",
+      "Tecnología"
+    ],
     "descripcion": "Aplicación de principios de ingeniería a la medicina y biología",
     "duracion": "5 años",
-    "modalidad": ["Presencial"],
+    "modalidad": [
+      "Presencial"
+    ],
     "requisitos_academicos": {
       "matematicas": "Alto",
       "fisica": "Alto",
@@ -77,11 +112,18 @@
     "salario_promedio": "3.500.000 - 7.500.000 COP"
   },
   "Medicina": {
-    "perfil_personalidad": ["Investigador", "Social"],
-    "sector_preferido": ["Salud"],
+    "perfil_personalidad": [
+      "Investigador",
+      "Social"
+    ],
+    "sector_preferido": [
+      "Salud"
+    ],
     "descripcion": "Diagnóstico, tratamiento y prevención de enfermedades",
     "duracion": "6 años + especialización",
-    "modalidad": ["Presencial"],
+    "modalidad": [
+      "Presencial"
+    ],
     "requisitos_academicos": {
       "biologia": "Alto",
       "quimica": "Alto",
@@ -100,14 +142,28 @@
       "Salud pública",
       "Especialidades médicas"
     ],
-    "salario_promedio": "4.000.000 - 15.000.000 COP"
+    "salario_promedio": "4.000.000 - 15.000.000 COP",
+    "entorno_trabajo": [
+      "Oficina",
+      "Hospital"
+    ],
+    "interaccion_social": [
+      "Alta"
+    ]
   },
   "Enfermería": {
-    "perfil_personalidad": ["Social", "Organizador"],
-    "sector_preferido": ["Salud"],
+    "perfil_personalidad": [
+      "Social",
+      "Organizador"
+    ],
+    "sector_preferido": [
+      "Salud"
+    ],
     "descripcion": "Cuidado integral de la salud de individuos y comunidades",
     "duracion": "4 años",
-    "modalidad": ["Presencial"],
+    "modalidad": [
+      "Presencial"
+    ],
     "requisitos_academicos": {
       "biologia": "Alto",
       "quimica": "Medio",
@@ -129,11 +185,20 @@
     "salario_promedio": "2.800.000 - 5.500.000 COP"
   },
   "Psicología": {
-    "perfil_personalidad": ["Social", "Investigador"],
-    "sector_preferido": ["Salud", "Educativo"],
+    "perfil_personalidad": [
+      "Social",
+      "Investigador"
+    ],
+    "sector_preferido": [
+      "Salud",
+      "Educativo"
+    ],
     "descripcion": "Estudio del comportamiento humano y procesos mentales",
     "duracion": "5 años",
-    "modalidad": ["Presencial", "Virtual"],
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
     "requisitos_academicos": {
       "ciencias_sociales": "Alto",
       "biologia": "Medio",
@@ -155,11 +220,18 @@
     "salario_promedio": "2.500.000 - 6.000.000 COP"
   },
   "Licenciatura en Matemáticas": {
-    "perfil_personalidad": ["Investigador", "Social"],
-    "sector_preferido": ["Educativo"],
+    "perfil_personalidad": [
+      "Investigador",
+      "Social"
+    ],
+    "sector_preferido": [
+      "Educativo"
+    ],
     "descripcion": "Formación de docentes especializados en matemáticas",
     "duracion": "4 años",
-    "modalidad": ["Presencial"],
+    "modalidad": [
+      "Presencial"
+    ],
     "requisitos_academicos": {
       "matematicas": "Alto",
       "fisica": "Medio",
@@ -181,11 +253,18 @@
     "salario_promedio": "2.200.000 - 4.500.000 COP"
   },
   "Licenciatura en Educación Física": {
-    "perfil_personalidad": ["Social", "Técnico"],
-    "sector_preferido": ["Educativo"],
+    "perfil_personalidad": [
+      "Social",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Educativo"
+    ],
     "descripcion": "Formación de docentes en educación física y deportes",
     "duracion": "4 años",
-    "modalidad": ["Presencial"],
+    "modalidad": [
+      "Presencial"
+    ],
     "requisitos_academicos": {
       "educacion_fisica": "Alto",
       "biologia": "Medio",
@@ -207,11 +286,20 @@
     "salario_promedio": "2.000.000 - 4.000.000 COP"
   },
   "Diseño Gráfico": {
-    "perfil_personalidad": ["Artístico", "Técnico"],
-    "sector_preferido": ["Cultural", "Tecnología"],
-    "descripcion": "Creación de comunicación visual y elementos gráficos",
+    "perfil_personalidad": [
+      "Artístico",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Artístico",
+      "Comercial"
+    ],
+    "descripcion": "Creación de comunicaciones visuales y diseño digital",
     "duracion": "4 años",
-    "modalidad": ["Presencial", "Virtual"],
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
     "requisitos_academicos": {
       "educacion_artistica": "Alto",
       "matematicas": "Medio",
@@ -219,25 +307,33 @@
     },
     "universidades": [
       "Universidad Nacional de Colombia",
-      "Universidad Jorge Tadeo Lozano",
       "Universidad de los Andes",
       "Universidad Javeriana",
-      "Universidad de Palermo"
+      "Universidad El Bosque",
+      "Universidad Jorge Tadeo Lozano"
     ],
     "campo_laboral": [
       "Diseño publicitario",
-      "Diseño editorial",
       "Diseño web",
-      "Branding corporativo"
+      "Branding",
+      "Ilustración digital"
     ],
-    "salario_promedio": "2.500.000 - 5.500.000 COP"
+    "salario_promedio": "2.500.000 - 6.000.000 COP"
   },
   "Música": {
-    "perfil_personalidad": ["Artístico", "Social"],
-    "sector_preferido": ["Cultural", "Educativo"],
+    "perfil_personalidad": [
+      "Artístico",
+      "Social"
+    ],
+    "sector_preferido": [
+      "Cultural",
+      "Educativo"
+    ],
     "descripcion": "Formación en interpretación, composición y teoría musical",
     "duracion": "4-5 años",
-    "modalidad": ["Presencial"],
+    "modalidad": [
+      "Presencial"
+    ],
     "requisitos_academicos": {
       "educacion_artistica": "Alto",
       "matematicas": "Medio",
@@ -259,11 +355,19 @@
     "salario_promedio": "2.000.000 - 8.000.000 COP"
   },
   "Derecho": {
-    "perfil_personalidad": ["Líder", "Social"],
-    "sector_preferido": ["Otros", "Educativo"],
+    "perfil_personalidad": [
+      "Líder",
+      "Social"
+    ],
+    "sector_preferido": [
+      "Otros",
+      "Educativo"
+    ],
     "descripcion": "Estudio del sistema jurídico y aplicación de la ley",
     "duracion": "5 años",
-    "modalidad": ["Presencial"],
+    "modalidad": [
+      "Presencial"
+    ],
     "requisitos_academicos": {
       "ciencias_sociales": "Alto",
       "lengua_castellana": "Alto",
@@ -285,11 +389,20 @@
     "salario_promedio": "3.000.000 - 12.000.000 COP"
   },
   "Administración de Empresas": {
-    "perfil_personalidad": ["Líder", "Organizador"],
-    "sector_preferido": ["Otros", "Industrial"],
+    "perfil_personalidad": [
+      "Líder",
+      "Organizador"
+    ],
+    "sector_preferido": [
+      "Otros",
+      "Industrial"
+    ],
     "descripcion": "Gestión y dirección de organizaciones empresariales",
     "duracion": "4-5 años",
-    "modalidad": ["Presencial", "Virtual"],
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
     "requisitos_academicos": {
       "matematicas": "Alto",
       "ciencias_economicas": "Alto",
@@ -311,11 +424,19 @@
     "salario_promedio": "3.000.000 - 10.000.000 COP"
   },
   "Biología": {
-    "perfil_personalidad": ["Investigador", "Técnico"],
-    "sector_preferido": ["Investigación", "Salud"],
+    "perfil_personalidad": [
+      "Investigador",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Investigación",
+      "Salud"
+    ],
     "descripcion": "Estudio de los seres vivos y procesos biológicos",
     "duracion": "5 años",
-    "modalidad": ["Presencial"],
+    "modalidad": [
+      "Presencial"
+    ],
     "requisitos_academicos": {
       "biologia": "Alto",
       "quimica": "Alto",
@@ -337,11 +458,19 @@
     "salario_promedio": "2.800.000 - 6.500.000 COP"
   },
   "Química": {
-    "perfil_personalidad": ["Investigador", "Técnico"],
-    "sector_preferido": ["Investigación", "Industrial"],
+    "perfil_personalidad": [
+      "Investigador",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Investigación",
+      "Industrial"
+    ],
     "descripcion": "Estudio de la materia, sus propiedades y transformaciones",
     "duracion": "5 años",
-    "modalidad": ["Presencial"],
+    "modalidad": [
+      "Presencial"
+    ],
     "requisitos_academicos": {
       "quimica": "Alto",
       "matematicas": "Alto",
@@ -363,11 +492,19 @@
     "salario_promedio": "3.000.000 - 7.000.000 COP"
   },
   "Ingeniería de Software": {
-    "perfil_personalidad": ["Técnico", "Investigador"],
-    "sector_preferido": ["Tecnología"],
+    "perfil_personalidad": [
+      "Técnico",
+      "Investigador"
+    ],
+    "sector_preferido": [
+      "Tecnología"
+    ],
     "descripcion": "Desarrollo y mantenimiento de sistemas de software",
     "duracion": "4-5 años",
-    "modalidad": ["Presencial", "Virtual"],
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
     "requisitos_academicos": {
       "matematicas": "Alto",
       "fisica": "Medio",
@@ -389,11 +526,19 @@
     "salario_promedio": "3.800.000 - 9.000.000 COP"
   },
   "Diseño Industrial": {
-    "perfil_personalidad": ["Artístico", "Técnico"],
-    "sector_preferido": ["Industrial", "Cultural"],
-    "descripcion": "Diseño de productos industriales y objetos de uso cotidiano",
-    "duracion": "5 años",
-    "modalidad": ["Presencial"],
+    "perfil_personalidad": [
+      "Artístico",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Industrial",
+      "Artístico"
+    ],
+    "descripcion": "Diseño de productos industriales y experiencias de usuario",
+    "duracion": "4 años",
+    "modalidad": [
+      "Presencial"
+    ],
     "requisitos_academicos": {
       "educacion_artistica": "Alto",
       "matematicas": "Medio",
@@ -403,23 +548,31 @@
       "Universidad Nacional de Colombia",
       "Universidad de los Andes",
       "Universidad Javeriana",
-      "Universidad Jorge Tadeo Lozano",
-      "Universidad de Palermo"
+      "Universidad El Bosque",
+      "Universidad Jorge Tadeo Lozano"
     ],
     "campo_laboral": [
       "Diseño de productos",
-      "Innovación industrial",
-      "Consultoría en diseño",
-      "Desarrollo de prototipos"
+      "Diseño de mobiliario",
+      "Diseño de empaques",
+      "Consultoría en diseño"
     ],
-    "salario_promedio": "3.200.000 - 7.500.000 COP"
+    "salario_promedio": "2.800.000 - 6.500.000 COP"
   },
   "Ingeniería Ambiental": {
-    "perfil_personalidad": ["Investigador", "Organizador"],
-    "sector_preferido": ["Industrial", "Salud"],
+    "perfil_personalidad": [
+      "Investigador",
+      "Organizador"
+    ],
+    "sector_preferido": [
+      "Industrial",
+      "Salud"
+    ],
     "descripcion": "Estudio de soluciones sostenibles a problemas ambientales.",
     "duracion": "5 años",
-    "modalidad": ["Presencial"],
+    "modalidad": [
+      "Presencial"
+    ],
     "requisitos_academicos": {
       "quimica": "Alto",
       "biologia": "Alto",
@@ -438,11 +591,20 @@
     "salario_promedio": "2.800.000 - 6.000.000 COP"
   },
   "Trabajo Social": {
-    "perfil_personalidad": ["Social", "Líder"],
-    "sector_preferido": ["Educativo", "Salud"],
+    "perfil_personalidad": [
+      "Social",
+      "Líder"
+    ],
+    "sector_preferido": [
+      "Educativo",
+      "Salud"
+    ],
     "descripcion": "Intervención en comunidades para mejorar condiciones sociales.",
     "duracion": "4 años",
-    "modalidad": ["Presencial", "Virtual"],
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
     "requisitos_academicos": {
       "ciencias_sociales": "Alto",
       "lengua_castellana": "Medio"
@@ -452,15 +614,26 @@
       "Universidad Externado",
       "Universidad de la Salle"
     ],
-    "campo_laboral": ["Trabajo comunitario", "ONGs", "Asistencia social"],
+    "campo_laboral": [
+      "Trabajo comunitario",
+      "ONGs",
+      "Asistencia social"
+    ],
     "salario_promedio": "2.200.000 - 4.500.000 COP"
   },
   "Técnico en Desarrollo de Software": {
-    "perfil_personalidad": ["Técnico"],
-    "sector_preferido": ["Tecnología"],
+    "perfil_personalidad": [
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Tecnología"
+    ],
     "descripcion": "Formación técnica en programación y bases de datos.",
     "duracion": "2 años",
-    "modalidad": ["Presencial", "Virtual"],
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
     "requisitos_academicos": {
       "matematicas": "Medio",
       "logica": "Alto"
@@ -478,11 +651,19 @@
     "salario_promedio": "1.500.000 - 3.000.000 COP"
   },
   "Tecnología Agropecuaria": {
-    "perfil_personalidad": ["Técnico", "Organizador"],
-    "sector_preferido": ["Industrial", "Salud"],
+    "perfil_personalidad": [
+      "Técnico",
+      "Organizador"
+    ],
+    "sector_preferido": [
+      "Industrial",
+      "Salud"
+    ],
     "descripcion": "Aplicación de técnicas modernas en producción agrícola y animal.",
     "duracion": "3 años",
-    "modalidad": ["Presencial"],
+    "modalidad": [
+      "Presencial"
+    ],
     "requisitos_academicos": {
       "biologia": "Medio",
       "ciencias_naturales": "Alto"
@@ -500,11 +681,19 @@
     "salario_promedio": "1.800.000 - 4.000.000 COP"
   },
   "Licenciatura en Educación Infantil": {
-    "perfil_personalidad": ["Social", "Artístico"],
-    "sector_preferido": ["Educativo"],
+    "perfil_personalidad": [
+      "Social",
+      "Artístico"
+    ],
+    "sector_preferido": [
+      "Educativo"
+    ],
     "descripcion": "Formación para la enseñanza y cuidado de niños en edad preescolar.",
     "duracion": "4 años",
-    "modalidad": ["Presencial", "Virtual"],
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
     "requisitos_academicos": {
       "lengua_castellana": "Alto",
       "ciencias_sociales": "Medio"
@@ -520,5 +709,520 @@
       "Docencia preescolar"
     ],
     "salario_promedio": "2.000.000 - 3.800.000 COP"
+  },
+  "Tecnología en Desarrollo de Software": {
+    "perfil_personalidad": [
+      "Técnico",
+      "Investigador"
+    ],
+    "sector_preferido": [
+      "Tecnología",
+      "Industrial"
+    ],
+    "descripcion": "Desarrollo de aplicaciones y sistemas de software con enfoque práctico",
+    "duracion": "3 años",
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
+    "requisitos_academicos": {
+      "matematicas": "Alto",
+      "fisica": "Medio",
+      "ciencias": "Medio"
+    },
+    "universidades": [
+      "SENA",
+      "Universidad de Caldas",
+      "Universidad del Quindío",
+      "Universidad de Cundinamarca",
+      "Universidad de Santander"
+    ],
+    "campo_laboral": [
+      "Desarrollo web",
+      "Desarrollo móvil",
+      "Testing de software",
+      "Soporte técnico"
+    ],
+    "salario_promedio": "2.500.000 - 5.500.000 COP"
+  },
+  "Tecnología en Gestión de Redes": {
+    "perfil_personalidad": [
+      "Técnico",
+      "Organizador"
+    ],
+    "sector_preferido": [
+      "Tecnología",
+      "Industrial"
+    ],
+    "descripcion": "Administración y gestión de redes de computadores y telecomunicaciones",
+    "duracion": "3 años",
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
+    "requisitos_academicos": {
+      "matematicas": "Alto",
+      "fisica": "Alto",
+      "ciencias": "Medio"
+    },
+    "universidades": [
+      "SENA",
+      "Universidad de Caldas",
+      "Universidad del Quindío",
+      "Universidad de Cundinamarca"
+    ],
+    "campo_laboral": [
+      "Administración de redes",
+      "Seguridad informática",
+      "Soporte técnico",
+      "Telecomunicaciones"
+    ],
+    "salario_promedio": "2.800.000 - 6.000.000 COP"
+  },
+  "Tecnología en Gestión Ambiental": {
+    "perfil_personalidad": [
+      "Investigador",
+      "Organizador"
+    ],
+    "sector_preferido": [
+      "Ambiental",
+      "Industrial"
+    ],
+    "descripcion": "Gestión y control de impactos ambientales en procesos industriales",
+    "duracion": "3 años",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "biologia": "Alto",
+      "quimica": "Alto",
+      "matematicas": "Medio"
+    },
+    "universidades": [
+      "SENA",
+      "Universidad de Caldas",
+      "Universidad del Quindío",
+      "Universidad de Cundinamarca"
+    ],
+    "campo_laboral": [
+      "Gestión ambiental empresarial",
+      "Auditoría ambiental",
+      "Control de contaminación",
+      "Educación ambiental"
+    ],
+    "salario_promedio": "2.500.000 - 5.000.000 COP"
+  },
+  "Tecnología en Logística": {
+    "perfil_personalidad": [
+      "Organizador",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Logística",
+      "Comercial"
+    ],
+    "descripcion": "Gestión de la cadena de suministro y distribución de productos",
+    "duracion": "3 años",
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
+    "requisitos_academicos": {
+      "matematicas": "Alto",
+      "ciencias_sociales": "Medio",
+      "ciencias": "Medio"
+    },
+    "universidades": [
+      "SENA",
+      "Universidad de Caldas",
+      "Universidad del Quindío",
+      "Universidad de Cundinamarca"
+    ],
+    "campo_laboral": [
+      "Gestión de almacenes",
+      "Transporte y distribución",
+      "Compras y abastecimiento",
+      "Planificación logística"
+    ],
+    "salario_promedio": "2.500.000 - 5.500.000 COP"
+  },
+  "Estadística": {
+    "perfil_personalidad": [
+      "Investigador",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Tecnología",
+      "Investigación"
+    ],
+    "descripcion": "Análisis de datos y métodos estadísticos para la toma de decisiones",
+    "duracion": "4 años",
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
+    "requisitos_academicos": {
+      "matematicas": "Alto",
+      "fisica": "Medio",
+      "ciencias": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad del Valle",
+      "Universidad de Antioquia"
+    ],
+    "campo_laboral": [
+      "Análisis de datos",
+      "Investigación de mercados",
+      "Control de calidad",
+      "Consultoría estadística"
+    ],
+    "salario_promedio": "3.000.000 - 7.000.000 COP"
+  },
+  "Ciencia de Datos": {
+    "perfil_personalidad": [
+      "Investigador",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Tecnología",
+      "Investigación"
+    ],
+    "descripcion": "Análisis y procesamiento de grandes volúmenes de datos para generar insights",
+    "duracion": "4 años",
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
+    "requisitos_academicos": {
+      "matematicas": "Alto",
+      "fisica": "Medio",
+      "ciencias": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad EAFIT",
+      "Universidad del Norte"
+    ],
+    "campo_laboral": [
+      "Machine Learning",
+      "Business Intelligence",
+      "Análisis predictivo",
+      "Big Data"
+    ],
+    "salario_promedio": "3.500.000 - 8.500.000 COP"
+  },
+  "Economía": {
+    "perfil_personalidad": [
+      "Investigador",
+      "Organizador"
+    ],
+    "sector_preferido": [
+      "Financiero",
+      "Comercial"
+    ],
+    "descripcion": "Análisis de fenómenos económicos y políticas públicas",
+    "duracion": "4 años",
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
+    "requisitos_academicos": {
+      "matematicas": "Alto",
+      "ciencias_sociales": "Alto",
+      "ciencias": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad del Rosario",
+      "Universidad EAFIT"
+    ],
+    "campo_laboral": [
+      "Análisis económico",
+      "Políticas públicas",
+      "Consultoría económica",
+      "Investigación económica"
+    ],
+    "salario_promedio": "3.000.000 - 7.500.000 COP"
+  },
+  "Finanzas": {
+    "perfil_personalidad": [
+      "Organizador",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Financiero",
+      "Comercial"
+    ],
+    "descripcion": "Gestión financiera empresarial y análisis de inversiones",
+    "duracion": "4 años",
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
+    "requisitos_academicos": {
+      "matematicas": "Alto",
+      "ciencias_sociales": "Medio",
+      "ciencias": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad del Rosario",
+      "Universidad EAFIT"
+    ],
+    "campo_laboral": [
+      "Análisis financiero",
+      "Gestión de inversiones",
+      "Banca y seguros",
+      "Consultoría financiera"
+    ],
+    "salario_promedio": "3.200.000 - 8.000.000 COP"
+  },
+  "Mercadeo": {
+    "perfil_personalidad": [
+      "Social",
+      "Organizador"
+    ],
+    "sector_preferido": [
+      "Comercial",
+      "Servicios"
+    ],
+    "descripcion": "Estrategias de marketing y gestión de marcas",
+    "duracion": "4 años",
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
+    "requisitos_academicos": {
+      "ciencias_sociales": "Alto",
+      "matematicas": "Medio",
+      "ciencias": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad del Rosario",
+      "Universidad EAFIT"
+    ],
+    "campo_laboral": [
+      "Marketing digital",
+      "Investigación de mercados",
+      "Publicidad",
+      "Gestión de marcas"
+    ],
+    "salario_promedio": "2.800.000 - 6.500.000 COP"
+  },
+  "Comercio Internacional": {
+    "perfil_personalidad": [
+      "Organizador",
+      "Social"
+    ],
+    "sector_preferido": [
+      "Comercial",
+      "Logística"
+    ],
+    "descripcion": "Gestión de operaciones comerciales internacionales",
+    "duracion": "4 años",
+    "modalidad": [
+      "Presencial",
+      "Virtual"
+    ],
+    "requisitos_academicos": {
+      "ciencias_sociales": "Alto",
+      "matematicas": "Medio",
+      "ciencias": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad del Rosario",
+      "Universidad EAFIT"
+    ],
+    "campo_laboral": [
+      "Importación y exportación",
+      "Logística internacional",
+      "Negociación comercial",
+      "Consultoría internacional"
+    ],
+    "salario_promedio": "3.000.000 - 7.000.000 COP"
+  },
+  "Fisioterapia": {
+    "perfil_personalidad": [
+      "Social",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Salud"
+    ],
+    "descripcion": "Rehabilitación física y prevención de lesiones",
+    "duracion": "4 años",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "biologia": "Alto",
+      "fisica": "Medio",
+      "matematicas": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad del Rosario",
+      "Universidad CES"
+    ],
+    "campo_laboral": [
+      "Rehabilitación física",
+      "Deportes y fitness",
+      "Salud ocupacional",
+      "Geriatría"
+    ],
+    "salario_promedio": "2.800.000 - 5.500.000 COP"
+  },
+  "Terapia Ocupacional": {
+    "perfil_personalidad": [
+      "Social",
+      "Artístico"
+    ],
+    "sector_preferido": [
+      "Salud",
+      "Social"
+    ],
+    "descripcion": "Rehabilitación funcional y mejora de la calidad de vida",
+    "duracion": "4 años",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "biologia": "Alto",
+      "ciencias_sociales": "Medio",
+      "matematicas": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad del Rosario",
+      "Universidad CES"
+    ],
+    "campo_laboral": [
+      "Rehabilitación funcional",
+      "Salud mental",
+      "Pediatría",
+      "Geriatría"
+    ],
+    "salario_promedio": "2.500.000 - 5.000.000 COP"
+  },
+  "Criminalística": {
+    "perfil_personalidad": [
+      "Investigador",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Seguridad",
+      "Investigación"
+    ],
+    "descripcion": "Análisis de evidencia física en investigaciones criminales",
+    "duracion": "4 años",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "biologia": "Alto",
+      "quimica": "Alto",
+      "matematicas": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Andes",
+      "Universidad Javeriana",
+      "Universidad del Rosario",
+      "Universidad CES"
+    ],
+    "campo_laboral": [
+      "Investigación criminal",
+      "Análisis de evidencia",
+      "Peritaje forense",
+      "Seguridad privada"
+    ],
+    "salario_promedio": "3.000.000 - 6.500.000 COP"
+  },
+  "Ingeniería Agronómica": {
+    "perfil_personalidad": [
+      "Técnico",
+      "Investigador"
+    ],
+    "sector_preferido": [
+      "Agropecuario",
+      "Ambiental"
+    ],
+    "descripcion": "Optimización de procesos agrícolas y gestión de recursos naturales",
+    "duracion": "5 años",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "biologia": "Alto",
+      "quimica": "Alto",
+      "matematicas": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Llanos",
+      "Universidad de Córdoba",
+      "Universidad de Caldas",
+      "Universidad de Nariño"
+    ],
+    "campo_laboral": [
+      "Producción agrícola",
+      "Gestión de cultivos",
+      "Investigación agrícola",
+      "Consultoría agropecuaria"
+    ],
+    "salario_promedio": "2.800.000 - 6.000.000 COP"
+  },
+  "Medicina Veterinaria": {
+    "perfil_personalidad": [
+      "Social",
+      "Técnico"
+    ],
+    "sector_preferido": [
+      "Salud",
+      "Agropecuario"
+    ],
+    "descripcion": "Salud animal y medicina veterinaria",
+    "duracion": "5 años",
+    "modalidad": [
+      "Presencial"
+    ],
+    "requisitos_academicos": {
+      "biologia": "Alto",
+      "quimica": "Alto",
+      "matematicas": "Medio"
+    },
+    "universidades": [
+      "Universidad Nacional de Colombia",
+      "Universidad de los Llanos",
+      "Universidad de Córdoba",
+      "Universidad de Caldas",
+      "Universidad de Nariño"
+    ],
+    "campo_laboral": [
+      "Clínica veterinaria",
+      "Salud animal",
+      "Producción pecuaria",
+      "Investigación veterinaria"
+    ],
+    "salario_promedio": "3.000.000 - 7.000.000 COP"
   }
 }

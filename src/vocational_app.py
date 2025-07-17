@@ -9,11 +9,11 @@ import os
 # Añadir el directorio src al path para importar módulos
 sys.path.append(os.path.join(os.path.dirname(__file__)))
 
-from career_recommender import CareerRecommender
+from improved_career_recommender import ImprovedCareerRecommender
 
 class VocationalGuidanceApp:
     def __init__(self):
-        self.recommender = CareerRecommender()
+        self.recommender = ImprovedCareerRecommender()
         self.dataset_path = '../data/dataset_completo.csv'
         
     def load_student_data(self):
@@ -168,6 +168,7 @@ class VocationalGuidanceApp:
             
             if recommendations:
                 print(f"\n🎯 RECOMENDACIONES DE CARRERAS UNIVERSITARIAS")
+                print(f"✅ Se encontraron {len(recommendations)} recomendaciones para tu perfil")
                 print("=" * 60)
                 
                 # Mostrar perfil predicho
@@ -185,19 +186,17 @@ class VocationalGuidanceApp:
                     print(f"   💰 Salario promedio: {rec['salario_promedio']}")
                     
                     # Mostrar razones de la recomendación
-                    matches = []
-                    if rec['match_perfil']:
-                        matches.append(f"✅ Coincide con tu perfil ({rec['perfil_predicho']})")
-                    if rec['match_sector']:
-                        matches.append(f"✅ Coincide con tu sector preferido ({rec['sector_predicho']})")
-                    
-                    if matches:
+                    if 'razones_recomendacion' in rec and rec['razones_recomendacion']:
                         print(f"   🎯 Razones de recomendación:")
-                        for match in matches:
-                            print(f"     {match}")
+                        for reason in rec['razones_recomendacion']:
+                            print(f"     ✅ {reason}")
                     
-                    if i >= 5:  # Mostrar solo las top 5
-                        break
+                    # Dar opción de ver más después de las primeras 5
+                    if i == 5 and len(recommendations) > 5:
+                        print(f"\n💡 Hay {len(recommendations) - 5} recomendaciones adicionales...")
+                        show_more = input("¿Deseas ver todas las recomendaciones? (s/n): ").strip().lower()
+                        if show_more != 's':
+                            break
             else:
                 print("\n❌ No se pudieron generar recomendaciones")
             

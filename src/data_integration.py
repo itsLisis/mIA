@@ -466,7 +466,7 @@ def main():
     integrator = DataIntegrator(formulario_path, notas_path)
     
     # Ejecutar integración completa con balanceo
-    df_final = integrator.run_full_integration(output_path, balance_data=True, target_samples_per_class=1000)
+    df_final = integrator.run_full_integration(output_path, balance_data=True, target_samples_per_class=1200)
     
     print(f"\nDataset final tiene {len(df_final)} filas y {len(df_final.columns)} columnas")
     print(f"Archivo guardado en: {output_path}")

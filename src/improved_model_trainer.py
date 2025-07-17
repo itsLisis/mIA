@@ -118,10 +118,167 @@ class ImprovedVocacionalModelTrainer:
         df_engineered['rendimiento_medio_count'] = ((df_engineered[materias] >= 3.0) & (df_engineered[materias] < 4.0)).sum(axis=1)
         df_engineered['rendimiento_bajo_count'] = (df_engineered[materias] < 3.0).sum(axis=1)
         
+        # ===== NUEVAS CARACTERÍSTICAS ESPECÍFICAS PARA SECTOR =====
+        
+        # 7. Características basadas en respuestas del formulario
+        self._extract_preference_features(df_engineered)
+        
+        # 8. Indicadores vocacionales específicos
+        self._create_vocational_indicators(df_engineered)
+        
+        # 9. Perfiles de compatibilidad sector-académica
+        self._create_sector_compatibility_scores(df_engineered)
+        
         self.df = df_engineered
         print(f"Características adicionales creadas: {len(df_engineered.columns) - len(self.df.columns)} nuevas features")
         
         return self.df
+    
+    def _extract_preference_features(self, df: pd.DataFrame) -> None:
+        """
+        Extrae características específicas de las respuestas del formulario
+        """
+        print("Extrayendo características de preferencias del formulario...")
+        
+        # Procesar actividades en ratos libres
+        if '¿Qué prefieres hacer en tus ratos libres?' in df.columns:
+            actividades_col = '¿Qué prefieres hacer en tus ratos libres?'
+            df['pref_actividades_artisticas'] = df[actividades_col].str.contains('actividades artisticas|arte', case=False, na=False).astype(int)
+            df['pref_experimentos'] = df[actividades_col].str.contains('experimentos|leer', case=False, na=False).astype(int)
+            df['pref_social'] = df[actividades_col].str.contains('amigos|conversas|escuchar', case=False, na=False).astype(int)
+            df['pref_deporte_construccion'] = df[actividades_col].str.contains('deporte|construir', case=False, na=False).astype(int)
+            df['pref_organizar'] = df[actividades_col].str.contains('organizar|planificar', case=False, na=False).astype(int)
+        
+        # Procesar tipo de trabajo futuro
+        if '¿Cómo te imaginas tu trabajo en 10 años?' in df.columns:
+            trabajo_col = '¿Cómo te imaginas tu trabajo en 10 años?'
+            df['trabajo_creativo'] = df[trabajo_col].str.contains('arte|creaciones propias', case=False, na=False).astype(int)
+            df['trabajo_datos'] = df[trabajo_col].str.contains('información|datos|clasificar|analizar', case=False, na=False).astype(int)
+            df['trabajo_personas'] = df[trabajo_col].str.contains('personas|enseñando|cuidando', case=False, na=False).astype(int)
+            df['trabajo_herramientas'] = df[trabajo_col].str.contains('herramientas|construir|crear', case=False, na=False).astype(int)
+        
+        # Procesar sectores de interés
+        if '¿En cuál de estos sectores te gustaría trabajar?' in df.columns:
+            sector_col = '¿En cuál de estos sectores te gustaría trabajar?'
+            df['interes_salud'] = df[sector_col].str.contains('salud', case=False, na=False).astype(int)
+            df['interes_educacion'] = df[sector_col].str.contains('educación', case=False, na=False).astype(int)
+            df['interes_tic'] = df[sector_col].str.contains('tic|tecnologías|telecomunicaciones', case=False, na=False).astype(int)
+            df['interes_industrial'] = df[sector_col].str.contains('industrial|manufacturero', case=False, na=False).astype(int)
+            df['interes_cultural'] = df[sector_col].str.contains('cultural|artístico', case=False, na=False).astype(int)
+            df['interes_investigacion'] = df[sector_col].str.contains('investigación|ciencias', case=False, na=False).astype(int)
+        
+        # Procesar temas de trabajo
+        if '¿Cuál sería el tema principal de tu trabajo?' in df.columns:
+            tema_col = '¿Cuál sería el tema principal de tu trabajo?'
+            df['tema_arte'] = df[tema_col].str.contains('diseño|música|baile|teatro|cocina', case=False, na=False).astype(int)
+            df['tema_naturaleza'] = df[tema_col].str.contains('naturaleza|universo|funcionamiento', case=False, na=False).astype(int)
+            df['tema_aprendizaje'] = df[tema_col].str.contains('aprendizaje|niños|jóvenes|adultos', case=False, na=False).astype(int)
+            df['tema_objetos'] = df[tema_col].str.contains('desarrollo|funcionamiento de objetos', case=False, na=False).astype(int)
+        
+        # Procesar habilidades
+        if '¿En cuál de estas áreas sientes que te va mejor?' in df.columns:
+            habilidad_col = '¿En cuál de estas áreas sientes que te va mejor?'
+            df['habilidad_creacion'] = df[habilidad_col].str.contains('creación|representación|objetos|imágenes', case=False, na=False).astype(int)
+            df['habilidad_matematicas'] = df[habilidad_col].str.contains('matemáticas|cálculo|símbolos|lógica', case=False, na=False).astype(int)
+            df['habilidad_personas'] = df[habilidad_col].str.contains('personas|relacionamiento|comunicación', case=False, na=False).astype(int)
+    
+    def _create_vocational_indicators(self, df: pd.DataFrame) -> None:
+        """
+        Crea indicadores vocacionales compuestos
+        """
+        print("Creando indicadores vocacionales compuestos...")
+        
+        # Indicador artístico
+        df['indicador_artistico'] = (
+            df.get('pref_actividades_artisticas', 0) * 3 +
+            df.get('trabajo_creativo', 0) * 3 +
+            df.get('interes_cultural', 0) * 2 +
+            df.get('tema_arte', 0) * 2 +
+            df.get('habilidad_creacion', 0) * 2 +
+            (df['Educación artística - Promedio'] > 3.5).astype(int) * 2
+        )
+        
+        # Indicador científico
+        df['indicador_cientifico'] = (
+            df.get('pref_experimentos', 0) * 3 +
+            df.get('trabajo_datos', 0) * 2 +
+            df.get('interes_investigacion', 0) * 3 +
+            df.get('tema_naturaleza', 0) * 2 +
+            df.get('habilidad_matematicas', 0) * 2 +
+            (df['fortaleza_cientifica'] > 3.5).astype(int) * 2
+        )
+        
+        # Indicador social/educativo
+        df['indicador_social'] = (
+            df.get('pref_social', 0) * 3 +
+            df.get('trabajo_personas', 0) * 3 +
+            df.get('interes_educacion', 0) * 2 +
+            df.get('tema_aprendizaje', 0) * 2 +
+            df.get('habilidad_personas', 0) * 2 +
+            (df['fortaleza_humanistica'] > 3.5).astype(int) * 2
+        )
+        
+        # Indicador técnico/industrial
+        df['indicador_tecnico'] = (
+            df.get('pref_deporte_construccion', 0) * 2 +
+            df.get('trabajo_herramientas', 0) * 3 +
+            df.get('interes_industrial', 0) * 2 +
+            df.get('interes_tic', 0) * 2 +
+            df.get('tema_objetos', 0) * 2 +
+            (df['Matemáticas - Promedio'] > 3.5).astype(int) * 2
+        )
+        
+        # Indicador salud
+        df['indicador_salud'] = (
+            df.get('interes_salud', 0) * 4 +
+            (df['Biología y química - Promedio'] > 3.5).astype(int) * 2 +
+            (df['fortaleza_cientifica'] > 3.0).astype(int) * 1
+        )
+    
+    def _create_sector_compatibility_scores(self, df: pd.DataFrame) -> None:
+        """
+        Crea scores de compatibilidad entre perfil académico y sectores
+        """
+        print("Creando scores de compatibilidad sector-académica...")
+        
+        # Score para sector salud
+        df['score_salud'] = (
+            df['Biología y química - Promedio'] * 0.4 +
+            df['Matemáticas - Promedio'] * 0.3 +
+            df['Física - Promedio'] * 0.2 +
+            df.get('indicador_salud', 0) * 0.1
+        )
+        
+        # Score para sector educativo
+        df['score_educativo'] = (
+            df['fortaleza_humanistica'] * 0.3 +
+            df['Lengua castellana - Promedio'] * 0.25 +
+            df['Ciencias sociales - Promedio'] * 0.25 +
+            df.get('indicador_social', 0) * 0.2
+        )
+        
+        # Score para sector técnico/industrial
+        df['score_tecnico'] = (
+            df['Matemáticas - Promedio'] * 0.3 +
+            df['Física - Promedio'] * 0.3 +
+            df['fortaleza_cientifica'] * 0.2 +
+            df.get('indicador_tecnico', 0) * 0.2
+        )
+        
+        # Score para sector artístico/cultural
+        df['score_artistico'] = (
+            df['Educación artística - Promedio'] * 0.4 +
+            df['fortaleza_artistica'] * 0.3 +
+            df.get('indicador_artistico', 0) * 0.3
+        )
+        
+        # Score para sector investigación
+        df['score_investigacion'] = (
+            df['fortaleza_cientifica'] * 0.4 +
+            df['Matemáticas - Promedio'] * 0.25 +
+            df['Física - Promedio'] * 0.2 +
+            df.get('indicador_cientifico', 0) * 0.15
+        )
     
     def select_features(self, target_variable: str = "Perfil Personalidad") -> Tuple[pd.DataFrame, pd.Series]:
         """
@@ -163,17 +320,41 @@ class ImprovedVocacionalModelTrainer:
             'rendimiento_medio_count', 'rendimiento_bajo_count'
         ]
         
+        # Características específicas para sectores
+        sector_features = [
+            # Preferencias del formulario
+            'pref_actividades_artisticas', 'pref_experimentos', 'pref_social', 
+            'pref_deporte_construccion', 'pref_organizar',
+            'trabajo_creativo', 'trabajo_datos', 'trabajo_personas', 'trabajo_herramientas',
+            'interes_salud', 'interes_educacion', 'interes_tic', 'interes_industrial', 
+            'interes_cultural', 'interes_investigacion',
+            'tema_arte', 'tema_naturaleza', 'tema_aprendizaje', 'tema_objetos',
+            'habilidad_creacion', 'habilidad_matematicas', 'habilidad_personas',
+            # Indicadores vocacionales
+            'indicador_artistico', 'indicador_cientifico', 'indicador_social', 
+            'indicador_tecnico', 'indicador_salud',
+            # Scores de compatibilidad
+            'score_salud', 'score_educativo', 'score_tecnico', 'score_artistico', 'score_investigacion'
+        ]
+        
         # Verificar disponibilidad
         available_numeric = [col for col in numeric_features if col in self.df.columns]
         available_categorical = [col for col in categorical_features if col in self.df.columns]
         available_derived = [col for col in derived_features if col in self.df.columns]
+        available_sector = [col for col in sector_features if col in self.df.columns]
         
         print(f"Features numéricas: {len(available_numeric)}")
         print(f"Features categóricas: {len(available_categorical)}")
         print(f"Features derivadas: {len(available_derived)}")
+        print(f"Features específicas para sector: {len(available_sector)}")
         
         # Combinar todas las características
-        feature_columns = available_numeric + available_categorical + available_derived
+        if target_variable == "Sector Preferido":
+            # Para predicción de sector, priorizar las características específicas
+            feature_columns = available_numeric + available_categorical + available_derived + available_sector
+        else:
+            # Para otras predicciones, usar las características estándar
+            feature_columns = available_numeric + available_categorical + available_derived
         self.X = self.df[feature_columns].copy()
         
         # Limpiar datos de características
@@ -294,14 +475,19 @@ class ImprovedVocacionalModelTrainer:
         
         return self.X_train, self.X_test, self.y_train, self.y_test
     
-    def feature_selection(self) -> pd.DataFrame:
+    def feature_selection(self, target_variable: str = None) -> pd.DataFrame:
         """
         Selección de características más importantes
         """
         print("Realizando selección de características...")
         
         # Usar SelectKBest para seleccionar las mejores características
-        k = min(20, len(self.X_train.columns))  # Máximo 20 características
+        # Para sectores, usar más características debido a la complejidad del problema
+        if target_variable == "Sector Preferido":
+            k = min(35, len(self.X_train.columns))  # Más características para sectores
+        else:
+            k = min(20, len(self.X_train.columns))  # Máximo 20 características para otros
+        
         selector = SelectKBest(score_func=f_classif, k=k)
         
         X_train_selected = selector.fit_transform(self.X_train, self.y_train)
@@ -523,6 +709,72 @@ class ImprovedVocacionalModelTrainer:
         joblib.dump(model_data, model_path)
         print("Modelo mejorado guardado exitosamente")
     
+    def train_sector_specialized_model(self) -> VotingClassifier:
+        """
+        Entrenar modelo especializado para predicción de sectores
+        """
+        print("Entrenando modelo especializado para sectores...")
+        
+        # Algoritmos optimizados para clasificación multiclase con características categóricas
+        rf = RandomForestClassifier(
+            n_estimators=300,
+            max_depth=15,
+            min_samples_split=5,
+            min_samples_leaf=2,
+            max_features='sqrt',
+            class_weight='balanced',
+            random_state=42
+        )
+        
+        gb = GradientBoostingClassifier(
+            n_estimators=200,
+            learning_rate=0.05,
+            max_depth=8,
+            min_samples_split=10,
+            min_samples_leaf=4,
+            random_state=42
+        )
+        
+        # Usar SVM con kernel RBF para capturar relaciones no lineales
+        svm = SVC(
+            kernel='rbf',
+            C=10,
+            gamma='scale',
+            probability=True,
+            class_weight='balanced',
+            random_state=42
+        )
+        
+        # LogisticRegression con regularización L1 para selección de características
+        lr = LogisticRegression(
+            penalty='l1',
+            C=1.0,
+            solver='liblinear',
+            max_iter=2000,
+            class_weight='balanced',
+            random_state=42
+        )
+        
+        # Crear ensemble especializado con pesos ajustados
+        ensemble = VotingClassifier(
+            estimators=[
+                ('rf', rf),
+                ('gb', gb),
+                ('svm', svm),
+                ('lr', lr)
+            ],
+            voting='soft',
+            weights=[3, 2, 2, 1]  # Mayor peso a Random Forest
+        )
+        
+        # Entrenar ensemble
+        ensemble.fit(self.X_train, self.y_train)
+        
+        self.best_model = ensemble
+        print("Modelo especializado para sectores entrenado exitosamente")
+        
+        return ensemble
+    
     def run_improved_training(self, target_variable: str = "Perfil Personalidad", 
                              test_size: float = 0.2, 
                              save_model: bool = True) -> Dict[str, Any]:
@@ -548,22 +800,27 @@ class ImprovedVocacionalModelTrainer:
         self.split_data(test_size=test_size)
         
         # Selección de características
-        self.feature_selection()
+        self.feature_selection(target_variable)
         
         # Escalado
         self.scale_features()
         
-        # Entrenar modelo (elegir entre ensemble o tuning)
-        print("\n¿Qué tipo de modelo prefieres?")
-        print("1. Ensemble (más rápido)")
-        print("2. Optimización de hiperparámetros (más preciso pero más lento)")
-        
-        choice = input("Elige una opción (1 o 2): ").strip()
-        
-        if choice == "2":
-            self.hyperparameter_tuning()
+        # Entrenar modelo según el tipo de predicción
+        if target_variable == "Sector Preferido":
+            print("\nUsando modelo especializado para predicción de sectores...")
+            self.train_sector_specialized_model()
         else:
-            self.train_ensemble_model()
+            # Para otras predicciones, elegir entre ensemble o tuning
+            print("\n¿Qué tipo de modelo prefieres?")
+            print("1. Ensemble (más rápido)")
+            print("2. Optimización de hiperparámetros (más preciso pero más lento)")
+            
+            choice = input("Elige una opción (1 o 2): ").strip()
+            
+            if choice == "2":
+                self.hyperparameter_tuning()
+            else:
+                self.train_ensemble_model()
         
         # Evaluar modelo
         results = self.evaluate_model()
